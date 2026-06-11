@@ -1,116 +1,336 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quitanda Toninho & Ana</title>
 
-    <meta property="og:title" content="Quitanda Toninho & Ana">
-    <meta property="og:description" content="Verduras fresquinhas da roça, bananas, temperos e produtos selecionados para sua mesa.">
-    <meta property="og:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
-    <meta property="og:image:secure_url" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://alisonlimao.github.io/_vendas_/">
-    <meta property="og:type" content="website">
+```
+<meta property="og:title" content="Quitanda Toninho & Ana">
+<meta property="og:description" content="Verduras fresquinhas da roça, bananas, temperos, frutas, legumes e produtos selecionados para sua mesa.">
+<meta property="og:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
+<meta property="og:image:secure_url" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://alisonlimao.github.io/_vendas_/">
+<meta property="og:type" content="website">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Quitanda Toninho & Ana">
-    <meta name="twitter:description" content="Frescor da roça, atendimento acolhedor e produtos escolhidos com carinho.">
-    <meta name="twitter:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quitanda Toninho & Ana">
+<meta name="twitter:description" content="Da roça para a quitanda. Da quitanda para a sua mesa.">
+<meta name="twitter:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f3e8;
-            color: #2f3b24;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        .banner {
-            width: 100%;
-            display: block;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f8f3e8;
+        color: #2f3b24;
+    }
 
-        .conteudo {
-            padding: 24px;
-            text-align: center;
-        }
+    .banner {
+        width: 100%;
+        display: block;
+    }
 
+    .hero {
+        background: linear-gradient(180deg, #f8f3e8 0%, #fffaf0 100%);
+        padding: 28px 18px 20px;
+        text-align: center;
+    }
+
+    .selo {
+        display: inline-block;
+        background: #e9f3df;
+        color: #2f5d34;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin: 8px 0 10px;
+        color: #2f5d34;
+    }
+
+    .subtitulo {
+        font-size: 21px;
+        line-height: 1.5;
+        max-width: 760px;
+        margin: 0 auto 18px;
+    }
+
+    .destaque {
+        color: #b35c1e;
+        font-weight: bold;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .botao {
+        display: inline-block;
+        background: #2f7d32;
+        color: white;
+        padding: 15px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 17px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+    }
+
+    .botao.secundario {
+        background: #b35c1e;
+    }
+
+    .secao {
+        padding: 26px 18px;
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+
+    .secao h2 {
+        text-align: center;
+        color: #2f5d34;
+        font-size: 28px;
+        margin: 0 0 18px;
+    }
+
+    .texto-central {
+        text-align: center;
+        font-size: 19px;
+        line-height: 1.6;
+        max-width: 840px;
+        margin: 0 auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        border: 1px solid #efe4d0;
+    }
+
+    .card .icone {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .card h3 {
+        margin: 0 0 8px;
+        color: #2f5d34;
+        font-size: 21px;
+    }
+
+    .card p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .faixa {
+        background: #2f5d34;
+        color: white;
+        text-align: center;
+        padding: 28px 18px;
+    }
+
+    .faixa h2 {
+        margin: 0 0 10px;
+        font-size: 28px;
+    }
+
+    .faixa p {
+        max-width: 780px;
+        margin: 0 auto;
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .info {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 22px;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .info p {
+        margin: 8px 0;
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .rodape {
+        text-align: center;
+        padding: 24px 18px 34px;
+        color: #5c5c5c;
+        font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
         h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #2f5d34;
+            font-size: 29px;
         }
 
-        .chamada {
-            font-size: 20px;
-            line-height: 1.5;
-            max-width: 720px;
-            margin: 0 auto 20px auto;
-        }
-
-        .destaque {
-            font-weight: bold;
-            color: #b35c1e;
-        }
-
-        .endereco {
-            margin-top: 24px;
+        .subtitulo {
             font-size: 18px;
-            background: #ffffff;
-            padding: 16px;
-            border-radius: 12px;
-            display: inline-block;
         }
 
         .botao {
-            margin-top: 20px;
-            display: inline-block;
-            background: #2f7d32;
-            color: white;
-            padding: 14px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+            width: 100%;
+            max-width: 320px;
         }
-    </style>
+
+        .secao h2,
+        .faixa h2 {
+            font-size: 24px;
+        }
+    }
+</style>
+```
+
 </head>
 
 <body>
 
-    <img 
-        class="banner"
-        src="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg" 
-        alt="Quitanda Toninho & Ana - produtos frescos da roça">
+```
+<img 
+    class="banner"
+    src="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg" 
+    alt="Quitanda Toninho & Ana - produtos frescos da roça">
 
-    <div class="conteudo">
-        <h1>Quitanda Toninho & Ana</h1>
+<section class="hero">
+    <span class="selo">Produtos frescos para o seu dia a dia</span>
 
-        <p class="chamada">
-            A partir de agora, a tarde tem cheiro de roça por aqui.
-            Verduras fresquinhas, temperos, bananas e produtos escolhidos
-            com cuidado para a sua mesa.
-        </p>
+    <h1>Quitanda Toninho & Ana</h1>
 
-        <p class="chamada">
-            <span class="destaque">
-                Da roça para a quitanda. Da quitanda para a sua casa.
-            </span>
-        </p>
+    <p class="subtitulo">
+        A tarde agora tem cheiro de roça por aqui.
+        Verduras fresquinhas, temperos, bananas, frutas, legumes
+        e produtos escolhidos com cuidado para a sua mesa.
+    </p>
 
-        <div class="endereco">
-            📍 Avenida Gutemala, 149 — Jardim América<br>
-            🕗 Aberto das 8h às 18h
-        </div>
+    <p class="subtitulo">
+        <span class="destaque">Da roça para a quitanda. Da quitanda para a sua casa.</span>
+    </p>
 
-        <br>
+    <div class="botoes">
+        <a class="botao" href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+            Falar com Toninho
+        </a>
 
-        <a class="botao" href="https://wa.me/+553591435086">
-            Chamar no WhatsApp
+        <a class="botao secundario" href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+            Falar com Ana
         </a>
     </div>
+</section>
+
+<section class="secao">
+    <h2>O que você encontra por aqui</h2>
+
+    <p class="texto-central">
+        A Quitanda Toninho & Ana trabalha com produtos para quem gosta de comida de casa,
+        salada fresquinha, tempero cheiroso e aquele atendimento simples, direto e de confiança.
+        A disponibilidade pode mudar conforme o dia, a colheita e a chegada dos produtos.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icone">🥬</div>
+            <h3>Verduras fresquinhas</h3>
+            <p>Opções para salada, refogado e janta do dia, com foco em frescor e qualidade.</p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🌿</div>
+            <h3>Temperos</h3>
+            <p>Temperos para deixar a comida mais cheirosa, saborosa e com gosto de casa.</p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🍌</div>
+            <h3>Bananas</h3>
+            <p>Bananas para o café, lanche, vitamina, bolo e para levar praticidade ao dia a dia.</p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🍅</div>
+            <h3>Frutas e legumes</h3>
+            <p>Produtos variados para completar sua compra com economia, sabor e praticidade.</p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🥔</div>
+            <h3>Itens do dia</h3>
+            <p>Mandioca, batata, cebola e outros produtos conforme chegada e disponibilidade.</p>
+        </div>
+
+        <div class="card">
+            <div class="icone">🧺</div>
+            <h3>Produtos selecionados</h3>
+            <p>Escolhemos os produtos pensando na mesa da sua família e no melhor aproveitamento.</p>
+        </div>
+    </div>
+</section>
+
+<section class="faixa">
+    <h2>Frescor, proximidade e confiança</h2>
+    <p>
+        Aqui a ideia é simples: oferecer produtos bons, atendimento próximo
+        e uma compra mais prática para quem mora perto e quer resolver o dia com qualidade.
+    </p>
+</section>
+
+<section class="secao">
+    <h2>Onde estamos</h2>
+
+    <div class="info">
+        <p><strong>📍 Avenida Gutemala, 149 — Jardim América</strong></p>
+        <p><strong>🕗 Aberto das 8h às 18h</strong></p>
+        <p>Chame no WhatsApp para saber o que chegou hoje ou passe na quitanda para escolher pessoalmente.</p>
+
+        <div class="botoes">
+            <a class="botao" href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+                WhatsApp Toninho
+            </a>
+
+            <a class="botao secundario" href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+                WhatsApp Ana
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="rodape">
+    Quitanda Toninho & Ana — produtos frescos, atendimento próximo e sabor de casa.
+</footer>
+```
 
 </body>
 </html>
