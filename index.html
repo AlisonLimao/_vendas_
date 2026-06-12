@@ -7,23 +7,72 @@
     <title>Quitanda Toninho & Ana</title>
 
 
-<!-- Google tag (gtag.js) - Google Analytics -->
+<!-- Google Consent Mode + Google Analytics -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+    });
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P22B9BLHBR"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    gtag('js', new Date());
+    gtag('config', 'G-P22B9BLHBR');
 
-  gtag('config', 'G-P22B9BLHBR');
+    function registrarCliqueWhatsApp(nome) {
+        gtag('event', 'clique_whatsapp', {
+            'nome_contato': nome,
+            'event_category': 'whatsapp',
+            'event_label': nome,
+            'transport_type': 'beacon'
+        });
+    }
+</script>
 
-  function registrarCliqueWhatsApp(nome) {
-    gtag('event', 'clique_whatsapp', {
-      'nome_contato': nome,
-      'event_category': 'whatsapp',
-      'event_label': nome,
-      'transport_type': 'beacon'
+<!-- Cookie Consent by TermsFeed -->
+<script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({
+        "notice_banner_type": "simple",
+        "consent_type": "express",
+        "palette": "light",
+        "language": "pt",
+        "website_name": "Quitanda Toninho & Ana",
+        "website_privacy_policy_url": "https://alisonlimao.github.io/_vendas_/",
+        "open_preferences_center_selector": "#open_preferences_center",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+        "callbacks": {
+            "scripts_specific_loaded": function(level) {
+                switch(level) {
+                    case 'tracking':
+                        gtag('consent', 'update', {
+                            'analytics_storage': 'granted'
+                        });
+                        break;
+
+                    case 'targeting':
+                        gtag('consent', 'update', {
+                            'ad_storage': 'granted',
+                            'ad_user_data': 'granted',
+                            'ad_personalization': 'granted'
+                        });
+                        break;
+                }
+            }
+        },
+        "callbacks_force": true
     });
-  }
+});
 </script>
 
 <meta property="og:title" content="Quitanda Toninho & Ana">
@@ -212,6 +261,12 @@
         font-size: 15px;
     }
 
+    .rodape a {
+        color: #2f5d34;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
         h1 {
             font-size: 29px;
@@ -360,7 +415,14 @@
 
 <footer class="rodape">
     Quitanda Toninho & Ana — produtos frescos, atendimento próximo e sabor de casa.
+    <br><br>
+    <a href="#" id="open_preferences_center">Preferências de cookies</a>
 </footer>
+
+<noscript>
+    Free cookie consent management tool by 
+    <a href="https://www.termsfeed.com/">TermsFeed Generator</a>
+</noscript>
 
 
 </body>
