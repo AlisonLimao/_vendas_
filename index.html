@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quitanda Toninho & Ana</title>
 
+```
+<!-- Google tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P22B9BLHBR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P22B9BLHBR');
+
+  function registrarCliqueWhatsApp(nome) {
+    gtag('event', 'clique_whatsapp', {
+      'nome_contato': nome,
+      'event_category': 'whatsapp',
+      'event_label': nome,
+      'transport_type': 'beacon'
+    });
+  }
+</script>
 
 <meta property="og:title" content="Quitanda Toninho & Ana">
 <meta property="og:description" content="Verduras fresquinhas da roça, bananas, temperos, frutas, legumes e produtos selecionados para sua mesa.">
@@ -213,13 +232,13 @@
         }
     }
 </style>
-
+```
 
 </head>
 
 <body>
 
-
+```
 <img 
     class="banner"
     src="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg" 
@@ -241,11 +260,17 @@
     </p>
 
     <div class="botoes">
-        <a class="botao" href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+        <a 
+            class="botao" 
+            onclick="registrarCliqueWhatsApp('Toninho')"
+            href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
             Falar com Toninho
         </a>
 
-        <a class="botao secundario" href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+        <a 
+            class="botao secundario" 
+            onclick="registrarCliqueWhatsApp('Ana')"
+            href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
             Falar com Ana
         </a>
     </div>
@@ -316,11 +341,17 @@
         <p>Chame no WhatsApp para saber o que chegou hoje ou passe na quitanda para escolher pessoalmente.</p>
 
         <div class="botoes">
-            <a class="botao" href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+            <a 
+                class="botao" 
+                onclick="registrarCliqueWhatsApp('Toninho')"
+                href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
                 WhatsApp Toninho
             </a>
 
-            <a class="botao secundario" href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+            <a 
+                class="botao secundario" 
+                onclick="registrarCliqueWhatsApp('Ana')"
+                href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
                 WhatsApp Ana
             </a>
         </div>
@@ -330,7 +361,7 @@
 <footer class="rodape">
     Quitanda Toninho & Ana — produtos frescos, atendimento próximo e sabor de casa.
 </footer>
-
+```
 
 </body>
 </html>
