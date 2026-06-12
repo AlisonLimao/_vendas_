@@ -7,7 +7,7 @@
     <title>Quitanda Toninho & Ana</title>
 
 
-<!-- Google Consent Mode + Google Analytics -->
+<!-- Google Consent Mode V2 - configuração padrão antes da tag -->
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -16,10 +16,12 @@
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
     });
 </script>
 
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P22B9BLHBR"></script>
 <script>
     gtag('js', new Date());
@@ -38,43 +40,46 @@
 <!-- Cookie Consent by TermsFeed -->
 <script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
 <script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-    cookieconsent.run({
-        "notice_banner_type": "simple",
-        "consent_type": "express",
-        "palette": "light",
-        "language": "pt",
-        "website_name": "Quitanda Toninho & Ana",
-        "website_privacy_policy_url": "https://alisonlimao.github.io/_vendas_/",
-        "open_preferences_center_selector": "#open_preferences_center",
-        "page_load_consent_levels": ["strictly-necessary"],
-        "notice_banner_reject_button_hide": false,
-        "preferences_center_close_button_hide": false,
-        "page_refresh_confirmation_buttons": false,
-        "callbacks": {
-            "scripts_specific_loaded": function(level) {
-                switch(level) {
-                    case 'tracking':
-                        gtag('consent', 'update', {
-                            'analytics_storage': 'granted'
-                        });
-                        break;
+    document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({
+            "notice_banner_type": "simple",
+            "consent_type": "express",
+            "palette": "light",
+            "language": "pt",
+            "website_name": "Quitanda Toninho & Ana",
+            "website_privacy_policy_url": "https://alisonlimao.github.io/_vendas_/",
+            "open_preferences_center_selector": "#open_preferences_center",
+            "page_load_consent_levels": ["strictly-necessary"],
+            "notice_banner_reject_button_hide": false,
+            "preferences_center_close_button_hide": false,
+            "page_refresh_confirmation_buttons": false,
 
-                    case 'targeting':
-                        gtag('consent', 'update', {
-                            'ad_storage': 'granted',
-                            'ad_user_data': 'granted',
-                            'ad_personalization': 'granted'
-                        });
-                        break;
+            "callbacks": {
+                "scripts_specific_loaded": function(level) {
+                    switch(level) {
+                        case 'tracking':
+                            gtag('consent', 'update', {
+                                'analytics_storage': 'granted'
+                            });
+                            break;
+
+                        case 'targeting':
+                            gtag('consent', 'update', {
+                                'ad_storage': 'granted',
+                                'ad_user_data': 'granted',
+                                'ad_personalization': 'granted'
+                            });
+                            break;
+                    }
                 }
-            }
-        },
-        "callbacks_force": true
+            },
+
+            "callbacks_force": true
+        });
     });
-});
 </script>
 
+<!-- Open Graph para prévia no WhatsApp -->
 <meta property="og:title" content="Quitanda Toninho & Ana">
 <meta property="og:description" content="Verduras fresquinhas da roça, bananas, temperos, frutas, legumes e produtos selecionados para sua mesa.">
 <meta property="og:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
@@ -85,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <meta property="og:url" content="https://alisonlimao.github.io/_vendas_/">
 <meta property="og:type" content="website">
 
+<!-- Twitter / outros apps -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quitanda Toninho & Ana">
 <meta name="twitter:description" content="Da roça para a quitanda. Da quitanda para a sua mesa.">
