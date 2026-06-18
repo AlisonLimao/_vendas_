@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quitanda Toninho & Ana</title>
-
+    <title>Promoções do dia na Quitanda Toninho & Ana</title>
+    <meta name="description" content="Ofertas e produtos selecionados do dia. Acompanhe primeiro e escolha melhor.">
 
 <!-- Google Consent Mode V2 - configuração padrão antes da tag -->
 <script>
@@ -80,29 +79,26 @@
 </script>
 
 <!-- Open Graph para prévia no WhatsApp -->
-<meta property="og:title" content="Quitanda Toninho & Ana">
-<meta property="og:description" content="Verduras fresquinhas da roça, bananas, temperos, frutas, legumes e produtos selecionados para sua mesa.">
-<meta property="og:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
-<meta property="og:image:secure_url" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
+<meta property="og:title" content="Promoções do dia na Quitanda Toninho & Ana">
+<meta property="og:description" content="Ofertas e produtos selecionados do dia. Acompanhe primeiro e escolha melhor.">
+<meta property="og:image" content="https://alisonlimao.github.io/_vendas_/promocoes/banner-promocoes.jpg">
+<meta property="og:image:secure_url" content="https://alisonlimao.github.io/_vendas_/promocoes/banner-promocoes.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://alisonlimao.github.io/_vendas_/">
+<meta property="og:url" content="https://alisonlimao.github.io/_vendas_/promocoes/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Quitanda Toninho & Ana">
 <meta property="og:locale" content="pt_BR">
 
 <!-- Twitter / outros apps -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quitanda Toninho & Ana">
-<meta name="twitter:description" content="Da roça para a quitanda. Da quitanda para a sua mesa.">
-<meta name="twitter:image" content="https://alisonlimao.github.io/_vendas_/banner-quitanda-og.jpg">
+<meta name="twitter:title" content="Promoções do dia na Quitanda Toninho & Ana">
+<meta name="twitter:description" content="Ofertas e produtos selecionados do dia. Acompanhe primeiro e escolha melhor.">
+<meta name="twitter:image" content="https://alisonlimao.github.io/_vendas_/promocoes/banner-promocoes.jpg">
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -110,21 +106,38 @@
         color: #2f3b24;
     }
 
-    .banner {
-        width: 100%;
-        display: block;
+    .banner { width: 100%; display: block; }
+
+    .topo {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 18px 18px 0;
+        text-align: center;
     }
+
+    .voltar {
+        display: inline-block;
+        color: #2f5d34;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 15px;
+        background: #fff;
+        border: 1px solid #d9c9a8;
+        padding: 8px 14px;
+        border-radius: 999px;
+    }
+    .voltar:hover { background: #e9f3df; }
 
     .hero {
         background: linear-gradient(180deg, #f8f3e8 0%, #fffaf0 100%);
-        padding: 28px 18px 20px;
+        padding: 24px 18px 20px;
         text-align: center;
     }
 
     .selo {
         display: inline-block;
-        background: #e9f3df;
-        color: #2f5d34;
+        background: #fde9d9;
+        color: #b35c1e;
         padding: 8px 14px;
         border-radius: 999px;
         font-weight: bold;
@@ -132,11 +145,7 @@
         margin-bottom: 12px;
     }
 
-    h1 {
-        font-size: 34px;
-        margin: 8px 0 10px;
-        color: #2f5d34;
-    }
+    h1 { font-size: 34px; margin: 8px 0 10px; color: #2f5d34; }
 
     .subtitulo {
         font-size: 21px;
@@ -145,10 +154,7 @@
         margin: 0 auto 18px;
     }
 
-    .destaque {
-        color: #b35c1e;
-        font-weight: bold;
-    }
+    .destaque { color: #b35c1e; font-weight: bold; }
 
     .botoes {
         display: flex;
@@ -169,42 +175,7 @@
         font-size: 17px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.16);
     }
-
-    .botao.secundario {
-        background: #b35c1e;
-    }
-
-    .nav-paginas {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 16px;
-    }
-
-    .nav-paginas a {
-        color: #2f5d34;
-        font-weight: bold;
-        font-size: 15px;
-        text-decoration: none;
-        background: #fff;
-        border: 1px solid #d9c9a8;
-        padding: 8px 14px;
-        border-radius: 999px;
-    }
-
-    .nav-paginas a:hover {
-        background: #e9f3df;
-    }
-
-    .voltar {
-        display: inline-block;
-        margin: 0 auto 12px;
-        color: #2f5d34;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 15px;
-    }
+    .botao.secundario { background: #b35c1e; }
 
     .secao {
         padding: 26px 18px;
@@ -241,42 +212,18 @@
         box-shadow: 0 4px 14px rgba(0,0,0,0.08);
         border: 1px solid #efe4d0;
     }
-
-    .card .icone {
-        font-size: 32px;
-        margin-bottom: 8px;
-    }
-
-    .card h3 {
-        margin: 0 0 8px;
-        color: #2f5d34;
-        font-size: 21px;
-    }
-
-    .card p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+    .card .icone { font-size: 32px; margin-bottom: 8px; }
+    .card h3 { margin: 0 0 8px; color: #2f5d34; font-size: 21px; }
+    .card p { margin: 0; font-size: 16px; line-height: 1.5; }
 
     .faixa {
-        background: #2f5d34;
+        background: #b35c1e;
         color: white;
         text-align: center;
         padding: 28px 18px;
     }
-
-    .faixa h2 {
-        margin: 0 0 10px;
-        font-size: 28px;
-    }
-
-    .faixa p {
-        max-width: 780px;
-        margin: 0 auto;
-        font-size: 19px;
-        line-height: 1.5;
-    }
+    .faixa h2 { margin: 0 0 10px; font-size: 28px; }
+    .faixa p { max-width: 780px; margin: 0 auto; font-size: 19px; line-height: 1.5; }
 
     .info {
         background: #ffffff;
@@ -287,12 +234,7 @@
         max-width: 760px;
         margin: 0 auto;
     }
-
-    .info p {
-        margin: 8px 0;
-        font-size: 19px;
-        line-height: 1.5;
-    }
+    .info p { margin: 8px 0; font-size: 19px; line-height: 1.5; }
 
     .rodape {
         text-align: center;
@@ -300,136 +242,95 @@
         color: #5c5c5c;
         font-size: 15px;
     }
-
-    .rodape a {
-        color: #2f5d34;
-        font-weight: bold;
-        text-decoration: underline;
-    }
+    .rodape a { color: #2f5d34; font-weight: bold; text-decoration: underline; }
 
     @media (max-width: 600px) {
-        h1 {
-            font-size: 29px;
-        }
-
-        .subtitulo {
-            font-size: 18px;
-        }
-
-        .botao {
-            width: 100%;
-            max-width: 320px;
-        }
-
-        .secao h2,
-        .faixa h2 {
-            font-size: 24px;
-        }
+        h1 { font-size: 29px; }
+        .subtitulo { font-size: 18px; }
+        .botao { width: 100%; max-width: 320px; }
+        .secao h2, .faixa h2 { font-size: 24px; }
     }
 </style>
-
-
 </head>
 
 <body>
 
-
-<img 
+<img
     class="banner"
-    src="https://alisonlimao.github.io/_vendas_/banner-quitanda-2.jpg" 
-    alt="Quitanda Toninho & Ana - produtos frescos da roça">
+    src="https://alisonlimao.github.io/_vendas_/promocoes/banner-promocoes.jpg"
+    alt="Promoções do dia na Quitanda Toninho & Ana">
+
+<div class="topo">
+    <a class="voltar" href="../">← Voltar para a página principal</a>
+</div>
 
 <section class="hero">
-    <span class="selo">Produtos frescos para o seu dia a dia</span>
+    <span class="selo">🏷️ Promoções do dia</span>
 
-    <h1>Quitanda Toninho & Ana</h1>
+    <h1>Promoções do dia</h1>
 
     <p class="subtitulo">
-        A tarde agora tem cheiro de roça por aqui.
-        Verduras fresquinhas, temperos, bananas, frutas, legumes
-        e produtos escolhidos com cuidado para a sua mesa.
+        Ofertas e produtos selecionados do dia para você aproveitar primeiro.
+        A disponibilidade muda conforme a chegada dos produtos.
     </p>
 
     <p class="subtitulo">
-        <span class="destaque">Da roça para a quitanda. Da quitanda para a sua casa.</span>
+        <span class="destaque">Acompanhe primeiro e escolha melhor.</span>
     </p>
 
     <div class="botoes">
-        <a 
-            class="botao" 
+        <a
+            class="botao"
             onclick="registrarCliqueWhatsApp('Toninho')"
-            href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+            href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Vim%20pelo%20site%20e%20quero%20saber%20as%20promo%C3%A7%C3%B5es%20de%20hoje.">
             Falar com Toninho
         </a>
 
-        <a 
-            class="botao secundario" 
+        <a
+            class="botao secundario"
             onclick="registrarCliqueWhatsApp('Ana')"
-            href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Vim%20pelo%20site%20da%20Quitanda%20e%20quero%20saber%20o%20que%20tem%20fresquinho%20hoje.">
+            href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Vim%20pelo%20site%20e%20quero%20saber%20as%20promo%C3%A7%C3%B5es%20de%20hoje.">
             Falar com Ana
         </a>
     </div>
-
-    <nav class="nav-paginas" aria-label="Páginas para compartilhar">
-        <a href="bananas/">🍌 Bananas</a>
-        <a href="promocoes/">🏷️ Promoções do dia</a>
-        <a href="novidades/">🆕 Chegou hoje</a>
-    </nav>
 </section>
 
 <section class="secao">
-    <h2>O que você encontra por aqui</h2>
-
+    <h2>O que pode estar em oferta</h2>
     <p class="texto-central">
-        A Quitanda Toninho & Ana trabalha com produtos para quem gosta de comida de casa,
-        salada fresquinha, tempero cheiroso e aquele atendimento simples, direto e de confiança.
-        A disponibilidade pode mudar conforme o dia, a colheita e a chegada dos produtos.
+        As ofertas mudam conforme o dia e a chegada dos produtos.
+        Chame no WhatsApp para conferir o que está com preço especial hoje.
     </p>
 
     <div class="cards">
         <div class="card">
             <div class="icone">🥬</div>
-            <h3>Verduras fresquinhas</h3>
-            <p>Opções para salada, refogado e janta do dia, com foco em frescor e qualidade.</p>
+            <h3>Verduras</h3>
+            <p>Opções para salada e refogado com preço bom do dia.</p>
         </div>
-
-        <div class="card">
-            <div class="icone">🌿</div>
-            <h3>Temperos</h3>
-            <p>Temperos para deixar a comida mais cheirosa, saborosa e com gosto de casa.</p>
-        </div>
-
         <div class="card">
             <div class="icone">🍌</div>
             <h3>Bananas</h3>
-            <p>Bananas para o café, lanche, vitamina, bolo e para levar praticidade ao dia a dia.</p>
+            <p>Bananas fresquinhas para levar na promoção.</p>
         </div>
-
         <div class="card">
             <div class="icone">🍅</div>
             <h3>Frutas e legumes</h3>
-            <p>Produtos variados para completar sua compra com economia, sabor e praticidade.</p>
+            <p>Variedade para completar a compra com economia.</p>
         </div>
-
         <div class="card">
             <div class="icone">🥔</div>
             <h3>Itens do dia</h3>
-            <p>Mandioca, batata, cebola e outros produtos conforme chegada e disponibilidade.</p>
-        </div>
-
-        <div class="card">
-            <div class="icone">🧺</div>
-            <h3>Produtos selecionados</h3>
-            <p>Escolhemos os produtos pensando na mesa da sua família e no melhor aproveitamento.</p>
+            <p>Mandioca, batata, cebola e outros conforme chegada.</p>
         </div>
     </div>
 </section>
 
 <section class="faixa">
-    <h2>Frescor, proximidade e confiança</h2>
+    <h2>Resolva o dia com qualidade</h2>
     <p>
-        Aqui a ideia é simples: oferecer produtos bons, atendimento próximo
-        e uma compra mais prática para quem mora perto e quer resolver o dia com qualidade.
+        Chame no WhatsApp e saiba o que chegou hoje e o que está em oferta.
+        Atendimento simples, direto e de confiança.
     </p>
 </section>
 
@@ -439,20 +340,20 @@
     <div class="info">
         <p><strong>📍 Avenida Gutemala, 149 — Jardim América</strong></p>
         <p><strong>🕗 Aberto das 8h às 18h</strong></p>
-        <p>Chame no WhatsApp para saber o que chegou hoje ou passe na quitanda para escolher pessoalmente.</p>
+        <p>Chame no WhatsApp para saber as promoções de hoje ou passe na quitanda.</p>
 
         <div class="botoes">
-            <a 
-                class="botao" 
+            <a
+                class="botao"
                 onclick="registrarCliqueWhatsApp('Toninho')"
-                href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+                href="https://wa.me/553591435086?text=Ol%C3%A1%2C%20Toninho.%20Quero%20saber%20as%20promo%C3%A7%C3%B5es%20dispon%C3%ADveis%20hoje.">
                 WhatsApp Toninho
             </a>
 
-            <a 
-                class="botao secundario" 
+            <a
+                class="botao secundario"
                 onclick="registrarCliqueWhatsApp('Ana')"
-                href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Quero%20saber%20os%20produtos%20dispon%C3%ADveis%20hoje.">
+                href="https://wa.me/553592688524?text=Ol%C3%A1%2C%20Ana.%20Quero%20saber%20as%20promo%C3%A7%C3%B5es%20dispon%C3%ADveis%20hoje.">
                 WhatsApp Ana
             </a>
         </div>
@@ -462,14 +363,14 @@
 <footer class="rodape">
     Quitanda Toninho & Ana — produtos frescos, atendimento próximo e sabor de casa.
     <br><br>
+    <a href="../">← Voltar para a página principal</a> &nbsp;·&nbsp;
     <a href="#" id="open_preferences_center">Preferências de cookies</a>
 </footer>
 
 <noscript>
-    Free cookie consent management tool by 
+    Free cookie consent management tool by
     <a href="https://www.termsfeed.com/">TermsFeed Generator</a>
 </noscript>
-
 
 </body>
 </html>
