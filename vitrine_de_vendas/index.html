@@ -13,6 +13,84 @@
   <meta property="og:type" content="website" />
   <meta name="robots" content="index,follow" />
 
+  <!-- Google Consent Mode V2 — padrão antes da tag do Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P22B9BLHBR"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-P22B9BLHBR', {
+      'anonymize_ip': true
+    });
+
+    function registrarCliqueTelegram(origem) {
+      gtag('event', 'clique_telegram', {
+        'origem': origem || 'nao_identificada',
+        'event_category': 'telegram',
+        'event_label': origem || 'nao_identificada',
+        'transport_type': 'beacon'
+      });
+    }
+  </script>
+
+  <!-- Cookie Consent by TermsFeed -->
+  <script
+    type="text/javascript"
+    src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
+    charset="UTF-8"></script>
+
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+      cookieconsent.run({
+        "notice_banner_type": "simple",
+        "consent_type": "express",
+        "palette": "dark",
+        "language": "pt",
+        "website_name": "VDV — Vitrine de Vendas",
+        "open_preferences_center_selector": "#open_preferences_center",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+
+        "callbacks": {
+          "scripts_specific_loaded": function(level) {
+            switch(level) {
+              case 'tracking':
+                gtag('consent', 'update', {
+                  'analytics_storage': 'granted'
+                });
+                break;
+
+              case 'targeting':
+                gtag('consent', 'update', {
+                  'ad_storage': 'granted',
+                  'ad_user_data': 'granted',
+                  'ad_personalization': 'granted'
+                });
+                break;
+            }
+          }
+        },
+
+        "callbacks_force": true
+      });
+    });
+  </script>
+
+
   <style>
     :root {
       --navy-950:#06101d;
@@ -924,7 +1002,7 @@
             </div>
 
             <div class="legal-note">
-              Termos de Uso e Política de Privacidade: estrutura reservada para publicação futura.
+              Cookies e Analytics só são ativados conforme o consentimento do visitante. Termos de Uso e Política de Privacidade continuam reservados para publicação futura.
             </div>
           </div>
 
@@ -942,12 +1020,21 @@
   <footer>
     <div class="wrap footer-row">
       <span>VDV — Vitrine de Vendas • Estoques locais em circulação</span>
-      <a href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">@vitrine_vendasbot</a>
+      <span>
+        <a href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">@vitrine_vendasbot</a>
+        &nbsp;•&nbsp;
+        <a href="#" id="open_preferences_center">Preferências de cookies</a>
+      </span>
     </div>
     <!-- Espaço reservado para futuros links:
          Termos de Uso
          Política de Privacidade
     -->
+
+    <noscript>
+      Gerenciamento de consentimento de cookies por
+      <a href="https://www.termsfeed.com/">TermsFeed</a>.
+    </noscript>
   </footer>
 
   <script>
@@ -975,6 +1062,23 @@
       localStorage.setItem('vdv-theme', next);
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next === 'light' ? '#f6f9fc' : '#07111f');
     });
+
+
+    // Eventos de clique no bot do Telegram
+    document.querySelectorAll('a[href="https://t.me/vitrine_vendasbot"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const origem =
+          link.dataset.gaOrigin ||
+          (link.classList.contains('mobile-cta') ? 'cta_mobile_fixo' :
+          link.classList.contains('nav-cta') ? 'cta_navegacao' :
+          link.closest('.final-cta') ? 'cta_final' :
+          link.closest('.hero') ? 'cta_hero' :
+          link.closest('footer') ? 'rodape' : 'outro');
+
+        registrarCliqueTelegram(origem);
+      });
+    });
+
   </script>
 </body>
 </html>
