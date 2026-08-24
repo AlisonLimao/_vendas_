@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07111f" />
+  <meta name="theme-color" content="#f7f1e7" />
   <meta name="color-scheme" content="dark light" />
 
   <title>VDV — Vitrine de Vendas | Malharia no Telegram</title>
   <meta name="description" content="VDV é uma vitrine organizada no Telegram para atacado de malharia: anuncie produtos, pesquise ofertas, publique Procuras e negocie direto. Projeto criado em Monte Sião para o setor de malharia local." />
-  <meta property="og:title" content="VDV — Estoques locais em circulação" />
-  <meta property="og:description" content="Produto parado de um lado. Procura do outro. O VDV organiza o encontro." />
+
+  <!--
+    TROQUE "SEU-SUBDOMINIO-AQUI" pela URL real assim que a página for publicada
+    (canonical, og:url e og:image dependem disso pra funcionar direito no Google
+    e nas prévias de WhatsApp/Telegram).
+  -->
+  <link rel="canonical" href="https://SEU-SUBDOMINIO-AQUI/" />
+
+  <meta property="og:title" content="VDV — sua mercadoria parada vira venda hoje" />
+  <meta property="og:description" content="Anuncie no VDV e coloque seu estoque na frente de quem já está comprando. Vitrine de atacado de malharia no Telegram, sem comissão." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://SEU-SUBDOMINIO-AQUI/" />
+  <meta property="og:image" content="https://SEU-SUBDOMINIO-AQUI/banner-vdv.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="600" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VDV — sua mercadoria parada vira venda hoje" />
+  <meta name="twitter:description" content="Anuncie no VDV e coloque seu estoque na frente de quem já está comprando. Sem comissão." />
+  <meta name="twitter:image" content="https://SEU-SUBDOMINIO-AQUI/banner-vdv.jpg" />
+
   <meta name="robots" content="index,follow" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "VDV — Vitrine de Vendas",
+    "description": "Vitrine organizada no Telegram para atacado de malharia: anúncios, pesquisa e publicação de Procuras entre lojistas, revendedores, fornecedores e compradores.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Monte Sião"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monte Sião",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "url": "https://SEU-SUBDOMINIO-AQUI/",
+    "sameAs": [
+      "https://t.me/vitrine_vendasbot"
+    ]
+  }
+  </script>
 
   <!-- Google Consent Mode V2 — padrão antes da tag do Analytics -->
   <script>
@@ -627,6 +668,292 @@
       .nav-cta,.btn-primary,.btn-secondary { transition:none; }
     }
   </style>
+
+<style id="vdv-brand-editorial-override">
+  :root,
+  html[data-theme="dark"],
+  html[data-theme="light"]{
+    --bg:#f7f1e7 !important;
+    --bg-soft:#efe6d9 !important;
+    --surface:#fffdf8 !important;
+    --surface-solid:#fffdf8 !important;
+    --surface-2:#f3e9dc !important;
+    --ink:#082452 !important;
+    --ink-soft:#213f69 !important;
+    --muted:#687a91 !important;
+    --line:rgba(8,36,82,.13) !important;
+    --line-strong:rgba(8,36,82,.23) !important;
+    --accent:#20a7e8 !important;
+    --accent-2:#c88f2e !important;
+    --accent-ink:#ffffff !important;
+    --shadow:0 22px 65px rgba(24,46,76,.14) !important;
+    --shadow-soft:0 12px 34px rgba(24,46,76,.10) !important;
+  }
+
+  body{
+    background:
+      radial-gradient(820px 500px at 98% -8%,rgba(32,167,232,.10),transparent 62%),
+      radial-gradient(640px 380px at -5% 20%,rgba(200,143,46,.08),transparent 62%),
+      #f7f1e7 !important;
+    color:#082452 !important;
+  }
+
+  .nav{
+    background:rgba(255,250,242,.90) !important;
+    border-bottom:1px solid rgba(8,36,82,.10) !important;
+    box-shadow:0 8px 28px rgba(24,46,76,.05);
+  }
+
+  .theme-toggle{display:none !important}
+
+  .brand-mark,
+  .logo-mark,
+  .orbit-center .big-logo{
+    background:linear-gradient(145deg,#20a7e8 0%,#168fd2 48%,#082452 100%) !important;
+  }
+
+  .brand-copy strong{color:#082452 !important}
+  .brand-copy span{color:#687a91 !important}
+
+  .nav-cta,
+  .btn-primary,
+  .mobile-cta{
+    background:linear-gradient(135deg,#20a7e8,#0b5aa7) !important;
+    color:#fff !important;
+    box-shadow:0 12px 30px rgba(32,167,232,.20) !important;
+  }
+
+  .btn-secondary{
+    color:#082452 !important;
+    border-color:rgba(8,36,82,.18) !important;
+    background:rgba(255,255,255,.58) !important;
+  }
+
+  .eyebrow{color:#0b5aa7 !important}
+  .eyebrow::before{background:linear-gradient(90deg,#20a7e8,#c88f2e) !important}
+
+  .hero{
+    background:
+      radial-gradient(620px 370px at 86% 12%,rgba(32,167,232,.09),transparent 65%) !important;
+  }
+
+  .hero h1{color:#082452 !important}
+  .hero h1 .accent-line{
+    background:linear-gradient(90deg,#0b5aa7 0%,#20a7e8 45%,#c88f2e 100%) !important;
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    color:transparent !important;
+  }
+
+  .hero-sub,
+  .section-lead,
+  details p,
+  .dual-card>p,
+  .trust-main p,
+  .trust-side p,
+  .procura-copy p,
+  .value span,
+  .step p{
+    color:#687a91 !important;
+  }
+
+  .hero-badge{
+    color:#0b5aa7 !important;
+    background:rgba(32,167,232,.07) !important;
+    border-color:rgba(32,167,232,.18) !important;
+  }
+
+  .hero-micro i,
+  .truth-list i{
+    color:#167c66 !important;
+    background:rgba(22,124,102,.09) !important;
+  }
+
+  .orbit,
+  .dual-card,
+  .step,
+  .trust-main,
+  .trust-side,
+  .procura-showcase,
+  .value,
+  details{
+    border-color:rgba(8,36,82,.12) !important;
+  }
+
+  .orbit{
+    background:
+      radial-gradient(circle at center,rgba(255,253,248,.92) 0 32%,transparent 33%),
+      radial-gradient(circle at center,rgba(32,167,232,.07),transparent 68%) !important;
+  }
+
+  .orbit-center,
+  .node,
+  .dual-card,
+  .step,
+  .trust-main,
+  .trust-side,
+  .procura-showcase{
+    background:linear-gradient(180deg,#fffdf8,#f4eadf) !important;
+    color:#082452 !important;
+  }
+
+  .node strong,
+  .dual-card h3,
+  .step h3,
+  .trust-main h3,
+  .procura-copy h3,
+  .section h2,
+  summary{
+    color:#082452 !important;
+  }
+
+  .dual-kicker,
+  .step-num,
+  .step-icon,
+  .procura-field small{
+    color:#0b5aa7 !important;
+  }
+
+  .search .dual-kicker,
+  .search .dual-step i{
+    color:#a56f16 !important;
+  }
+
+  .dual-step,
+  .procura-field{
+    background:rgba(255,255,255,.66) !important;
+    border-color:rgba(8,36,82,.10) !important;
+  }
+
+  .commission{
+    background:rgba(22,124,102,.07) !important;
+    border-color:rgba(22,124,102,.16) !important;
+  }
+  .commission b{color:#126b59 !important}
+
+  .cta-box{
+    background:
+      radial-gradient(500px 260px at 92% 0%,rgba(32,167,232,.13),transparent 65%),
+      linear-gradient(135deg,#fffdf8,#eee2d3) !important;
+    border-color:rgba(8,36,82,.13) !important;
+  }
+
+  footer{
+    background:#082452 !important;
+    color:rgba(255,255,255,.72) !important;
+    border-top:none !important;
+  }
+  footer a{color:#74d8ff !important}
+
+  /* Linguagem visual do card mais recente: azul-marinho + creme + dourado */
+  .value-strip{
+    background:#082452 !important;
+    border:none !important;
+  }
+  .value-strip .value{
+    background:rgba(255,255,255,.06) !important;
+    border-color:rgba(255,255,255,.12) !important;
+  }
+  .value-strip .value b{color:white !important}
+  .value-strip .value span{color:rgba(255,255,255,.70) !important}
+
+  /* BANNER */
+  .brand-banner{
+    padding:28px 0 0;
+  }
+
+  .brand-banner-frame{
+    overflow:hidden;
+    border-radius:28px;
+    border:1px solid rgba(8,36,82,.13);
+    background:#082452;
+    box-shadow:0 18px 55px rgba(24,46,76,.14);
+  }
+
+  .brand-banner-img{
+    display:block;
+    width:100%;
+    max-height:480px;
+    object-fit:cover;
+  }
+
+  .brand-banner-fallback{
+    min-height:285px;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:28px;
+    padding:38px 46px;
+    color:white;
+    background:
+      radial-gradient(420px 250px at 90% 5%,rgba(32,167,232,.24),transparent 66%),
+      linear-gradient(135deg,#082452,#0c3569);
+  }
+
+  .brand-banner-copy span{
+    display:inline-flex;
+    padding:7px 11px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    color:#e4f7ff;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.13em;
+  }
+
+  .brand-banner-copy strong{
+    display:block;
+    max-width:700px;
+    font-size:clamp(31px,4.6vw,58px);
+    line-height:1;
+    letter-spacing:-.045em;
+  }
+
+  .brand-banner-copy p{
+    margin-top:14px;
+    max-width:650px;
+    color:rgba(255,255,255,.74);
+  }
+
+  .brand-banner-knit{
+    position:relative;
+    min-height:190px;
+  }
+
+  .brand-banner-knit-card{
+    position:absolute;
+    width:225px;
+    height:118px;
+    right:30px;
+    border-radius:24px;
+    background:
+      repeating-linear-gradient(135deg,rgba(255,255,255,.12) 0 3px,transparent 3px 8px),
+      linear-gradient(145deg,#f1e8db,#cdb89f);
+    border:7px solid rgba(255,255,255,.06);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+  }
+
+  .knit-a{top:18px;transform:rotate(-7deg)}
+  .knit-b{top:50px;right:65px;transform:rotate(4deg);background:linear-gradient(145deg,#173c6c,#0b2850)}
+  .knit-c{top:84px;right:12px;transform:rotate(-2deg);background:linear-gradient(145deg,#9f262f,#681923)}
+
+  .brand-banner-help{
+    padding:8px 8px 0;
+    color:#687a91;
+    font-size:11px;
+  }
+
+  @media(max-width:780px){
+    .brand-banner-fallback{
+      min-height:220px;
+      grid-template-columns:1fr;
+      padding:28px 24px;
+    }
+    .brand-banner-knit{display:none}
+    .brand-banner-frame{border-radius:22px}
+  }
+</style>
+
 </head>
 
 <body>
@@ -654,39 +981,83 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">◐</button>
         <a class="nav-cta" href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">
           <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 3.2 18.6 20c-.24 1.19-.87 1.48-1.77.92l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.99.48l.35-4.97 9.05-8.18c.39-.35-.09-.55-.61-.2L6.2 13.77l-4.82-1.51c-1.05-.33-1.07-1.05.22-1.56L20.45 3.43c.87-.32 1.63.19 1.35-.23Z"/></svg>
-          Abrir o bot
+          Anunciar agora
         </a>
       </div>
     </div>
   </nav>
 
+  <section class="brand-banner" aria-label="Banner principal do VDV">
+    <div class="wrap">
+      <div class="brand-banner-frame">
+
+        <!--
+          COMO TROCAR O BANNER:
+          Salve a arte como "banner-vdv.jpg" na mesma pasta deste HTML.
+          Tamanho recomendado: 1600 x 600 px.
+          Prefira WebP se puder (arquivo bem mais leve pra carregar rápido no celular);
+          nesse caso troque o "banner-vdv.jpg" acima para "banner-vdv.webp".
+          Mire em algo abaixo de 200 KB pra não pesar no carregamento inicial.
+        -->
+        <img
+          class="brand-banner-img"
+          src="banner-vdv.jpg"
+          alt="Banner VDV — Vitrine de Vendas"
+          width="1600"
+          height="600"
+          fetchpriority="high"
+          decoding="async"
+          onerror="this.style.display='none';document.getElementById('vdvBannerFallback').style.display='grid';"
+        >
+
+        <div class="brand-banner-fallback" id="vdvBannerFallback" style="display:none">
+          <div class="brand-banner-copy">
+            <span>ESPAÇO PARA BANNER</span>
+            <strong>VDV — malharia de atacado, sem ruído.</strong>
+            <p>Substitua este espaço colocando o arquivo <b>banner-vdv.jpg</b> na mesma pasta da página.</p>
+          </div>
+
+          <div class="brand-banner-knit" aria-hidden="true">
+            <div class="brand-banner-knit-card knit-a"></div>
+            <div class="brand-banner-knit-card knit-b"></div>
+            <div class="brand-banner-knit-card knit-c"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-banner-help">
+        Área preparada para banner • recomendado 1600 × 600 px
+      </div>
+    </div>
+  </section>
+
   <main id="top">
     <header class="hero">
       <div class="wrap hero-grid">
         <div class="reveal">
-          <div class="hero-badge"><span class="pulse"></span> Projeto criado em Monte Sião para o setor de malharia local</div>
+          <div class="hero-badge"><span class="pulse"></span> Feito em Monte Sião para o setor de malharia</div>
 
           <h1>
-            Produto parado de um lado.<br>
-            <span class="accent-line">Procura do outro.</span>
+            Sua mercadoria parada<br>
+            <span class="accent-line">vira venda hoje.</span>
           </h1>
 
           <p class="hero-sub">
-            O <strong>VDV organiza os dois lados</strong>: quem tem mercadoria anuncia; quem procura pode pesquisar as ofertas e, se não encontrar, publicar uma Procura estruturada para receber respostas de fornecedores.
+            O VDV coloca <strong>seu estoque na frente de quem já está procurando comprar</strong>. Anuncie em minutos, receba interesse direto no seu contato e feche negócio sem intermediário levando parte do lucro.
           </p>
 
           <div class="hero-actions">
             <a class="btn-primary" href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">
               <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 3.2 18.6 20c-.24 1.19-.87 1.48-1.77.92l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.99.48l.35-4.97 9.05-8.18c.39-.35-.09-.55-.61-.2L6.2 13.77l-4.82-1.51c-1.05-.33-1.07-1.05.22-1.56L20.45 3.43c.87-.32 1.63.19 1.35-.23Z"/></svg>
-              Entrar no VDV
+              Anunciar agora no VDV
             </a>
-            <a class="btn-secondary" href="#como-funciona">Entender em 30 segundos</a>
+            <a class="btn-secondary" href="#como-funciona">Ver como funciona</a>
           </div>
 
           <div class="hero-micro">
-            <span><i>✓</i> Oferta + Procura</span>
-            <span><i>✓</i> Contato direto</span>
-            <span><i>✓</i> Hoje, sem comissão</span>
+            <span><i>✓</i> Leva menos de 2 minutos pra anunciar</span>
+            <span><i>✓</i> Contato direto, sem intermediário</span>
+            <span><i>✓</i> Sem comissão sobre a venda</span>
           </div>
         </div>
 
@@ -710,29 +1081,29 @@
 
             <div class="node node-stock">
               <small>Quem tem</small>
-              <strong>Mercadoria pronta</strong>
-              <p>Oferta estruturada e mais fácil de encontrar.</p>
+              <strong>Anuncia e é encontrado</strong>
+              <p>Seu produto na frente de quem já está com o dinheiro na mão pra comprar.</p>
               <div class="mini-knit"><div class="sweater"></div></div>
             </div>
 
             <div class="node node-search">
               <small>Quem procura</small>
-              <strong>Pesquisa ou publica a Procura</strong>
-              <p>Se não encontrar a oferta, transforma a necessidade em uma Procura organizada.</p>
+              <strong>Encontra rápido ou pede direto</strong>
+              <p>Pesquisa o que precisa e, se não achar pronto, publica a Procura em segundos.</p>
               <div class="mini-knit"><div class="sweater"></div></div>
             </div>
 
             <div class="node node-contact">
-              <small>Quando há interesse</small>
-              <strong>Resposta e contato direto</strong>
-              <p>Compradores e fornecedores avançam diretamente quando existe compatibilidade.</p>
+              <small>Quando dá match</small>
+              <strong>Contato liberado na hora</strong>
+              <p>Nada de espera: interesse virou conversa direto no seu Telegram.</p>
               <div class="mini-knit"><div class="sweater"></div></div>
             </div>
 
             <div class="node node-local">
-              <small>Resultado esperado</small>
-              <strong>Mais circulação local</strong>
-              <p>Estoque ganha visibilidade sem virar conversa solta.</p>
+              <small>Resultado</small>
+              <strong>Estoque virando venda</strong>
+              <p>Mais giro pra quem vende, mais opção pra quem compra.</p>
               <div class="mini-knit"><div class="sweater"></div></div>
             </div>
 
@@ -745,16 +1116,16 @@
     <section class="section compact value-strip">
       <div class="wrap value-grid">
         <div class="value reveal">
-          <b>Não é grupo.</b>
-          <span>O VDV organiza o fluxo pelo bot, sem depender de conversa pública misturada.</span>
+          <b>Seu anúncio não se perde.</b>
+          <span>Nada de mensagem sumindo no meio de grupo. Aqui o produto fica visível até alguém comprar.</span>
         </div>
         <div class="value reveal">
-          <b>Oferta e Procura no mesmo fluxo.</b>
-          <span>Quem vende publica produto. Quem compra pesquisa e também pode publicar o que está procurando.</span>
+          <b>Você compra ou vende quando quiser.</b>
+          <span>Anuncie o que sobrou ou publique a Procura do que está faltando. Sem burocracia.</span>
         </div>
         <div class="value reveal">
-          <b>Não entra na negociação.</b>
-          <span>Preço final, pagamento, entrega e condições ficam diretamente entre as partes.</span>
+          <b>O lucro fica todo com você.</b>
+          <span>O VDV aproxima as pontas e sai de cena. Preço, prazo e forma de pagamento você combina direto.</span>
         </div>
       </div>
     </section>
@@ -762,35 +1133,35 @@
     <section class="section" id="para-quem">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Oferta e procura com o mesmo peso</span>
-          <h2>Um lado tem mercadoria. O outro precisa encontrá-la.</h2>
+          <span class="eyebrow">Duas formas de sair ganhando</span>
+          <h2>Tem estoque parado ou precisa de mercadoria? O VDV resolve os dois lados.</h2>
           <p class="section-lead">
-            O VDV foi pensado para produtores, fornecedores, lojistas, revendedores e compradores de atacado. A pessoa pode vender em um momento e comprar em outro.
+            Feito para produtores, fornecedores, lojistas, revendedores e compradores de atacado da malharia. Anuncie o que sobrou, encontre o que falta — na mesma vitrine.
           </p>
         </div>
 
         <div class="dual-grid">
           <article class="dual-card reveal">
             <span class="dual-kicker">Tenho mercadoria</span>
-            <h3>Dê visibilidade ao que já está pronto.</h3>
-            <p>Quem tem produto disponível pode organizar a oferta e deixá-la pronta para ser encontrada por quem já está procurando.</p>
+            <h3>Transforme estoque parado em venda fechada.</h3>
+            <p>Cadastre o produto e deixe ele na frente de quem já está comprando esse tipo de peça agora.</p>
 
             <div class="dual-steps">
-              <div class="dual-step"><i>1</i><div><strong>Cadastre o produto</strong><span>Fotos e informações comerciais essenciais.</span></div></div>
-              <div class="dual-step"><i>2</i><div><strong>Informe disponibilidade</strong><span>Quantidade, preço de atacado e pedido mínimo.</span></div></div>
-              <div class="dual-step"><i>3</i><div><strong>Receba interesse</strong><span>Quando alguém quiser avançar, o VDV facilita o contato.</span></div></div>
+              <div class="dual-step"><i>1</i><div><strong>Cadastre em minutos</strong><span>Foto e as informações que realmente fazem vender.</span></div></div>
+              <div class="dual-step"><i>2</i><div><strong>Defina preço e quantidade</strong><span>Preço de atacado e pedido mínimo, do seu jeito.</span></div></div>
+              <div class="dual-step"><i>3</i><div><strong>Feche negócio</strong><span>Interesse virou contato direto, sem intermediário.</span></div></div>
             </div>
           </article>
 
           <article class="dual-card search reveal">
             <span class="dual-kicker">Estou procurando</span>
-            <h3>Pesquise. E, se não achar, publique a Procura.</h3>
-            <p>O VDV não limita o comprador ao que já está anunciado. A pessoa pode pesquisar as ofertas existentes e também publicar uma necessidade de compra de forma estruturada.</p>
+            <h3>Ache a mercadoria certa sem perder tempo.</h3>
+            <p>Pesquise o que precisa. Não achou pronto? Publique a Procura e deixe os fornecedores virem até você.</p>
 
             <div class="dual-steps">
-              <div class="dual-step"><i>1</i><div><strong>Pesquise primeiro</strong><span>Veja se a mercadoria que você precisa já está disponível na vitrine.</span></div></div>
-              <div class="dual-step"><i>2</i><div><strong>Publique a Procura</strong><span>Informe referência, descrição, quantidade, prazo e faixa de preço.</span></div></div>
-              <div class="dual-step"><i>3</i><div><strong>Receba respostas</strong><span>Fornecedores podem responder à Procura e avançar para o contato comercial.</span></div></div>
+              <div class="dual-step"><i>1</i><div><strong>Pesquise na vitrine</strong><span>O que você precisa pode já estar disponível agora.</span></div></div>
+              <div class="dual-step"><i>2</i><div><strong>Publique a Procura</strong><span>Referência, quantidade, prazo e faixa de preço.</span></div></div>
+              <div class="dual-step"><i>3</i><div><strong>Receba propostas</strong><span>Fornecedores respondem e você negocia direto.</span></div></div>
             </div>
           </article>
         </div>
@@ -800,31 +1171,31 @@
     <section class="section" id="como-funciona">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Como funciona hoje</span>
-          <h2>O fluxo é simples porque o objetivo é reduzir atrito.</h2>
-          <p class="section-lead">Sem prometer mais do que existe: hoje o VDV organiza anúncios, busca, publicação de Procuras, respostas de fornecedores e pedido de contato dentro do Telegram.</p>
+          <span class="eyebrow">4 passos até a venda</span>
+          <h2>Do anúncio ao contato fechado, tudo em minutos.</h2>
+          <p class="section-lead">Nada de esperar dias por resposta. Anúncio, busca, Procura e contato acontecem em tempo real, dentro do Telegram que você já usa.</p>
         </div>
 
         <div class="steps">
           <article class="step reveal">
             <div class="step-head"><span class="step-num">01</span><span class="step-icon">↗</span></div>
             <h3>Entre no bot</h3>
-            <p>Abra o VDV no Telegram e escolha o que quer fazer.</p>
+            <p>Um clique e você já está dentro do VDV, pronto pra anunciar ou procurar.</p>
           </article>
           <article class="step reveal">
             <div class="step-head"><span class="step-num">02</span><span class="step-icon">▤</span></div>
-            <h3>Anuncie, pesquise ou publique a Procura</h3>
-            <p>Quem vende cadastra a oferta. Quem compra pesquisa e também pode publicar o que precisa encontrar.</p>
+            <h3>Anuncie ou publique sua Procura</h3>
+            <p>Tem produto? Cadastra e já fica visível. Precisa comprar? Pesquisa ou pede exatamente o que quer.</p>
           </article>
           <article class="step reveal">
             <div class="step-head"><span class="step-num">03</span><span class="step-icon">⌕</span></div>
-            <h3>Oferta e demanda ficam claras</h3>
-            <p>Anúncios mostram as condições da oferta; Procuras organizam referência, quantidade, prazo, faixa de preço e outras preferências.</p>
+            <h3>Seu anúncio é encontrado</h3>
+            <p>Condições claras atraem interesse de verdade, direto de quem está pronto pra fechar.</p>
           </article>
           <article class="step reveal">
             <div class="step-head"><span class="step-num">04</span><span class="step-icon">⇄</span></div>
-            <h3>Responda e negocie direto</h3>
-            <p>Interesse em um anúncio ou em uma Procura pode virar contato. A negociação continua diretamente entre comprador e fornecedor.</p>
+            <h3>Negocie e venda</h3>
+            <p>O contato é liberado na hora. Você fala direto com o comprador ou fornecedor, sem espera.</p>
           </article>
         </div>
       </div>
@@ -834,20 +1205,20 @@
     <section class="section" id="procura">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Procura está ativa</span>
-          <h2>Se o produto não apareceu na busca, o comprador pode dizer exatamente o que precisa.</h2>
+          <span class="eyebrow">Não achou? Peça.</span>
+          <h2>Cansou de procurar? Publique a Procura e deixe os fornecedores virem até você.</h2>
           <p class="section-lead">
-            A Procura transforma uma necessidade que normalmente se perderia em conversa solta em um pedido comercial organizado e respondível por fornecedores.
+            Chega de perder tempo caçando mercadoria. Diga exatamente o que precisa e receba resposta de quem tem o produto certo.
           </p>
         </div>
 
         <div class="procura-showcase reveal">
           <div class="procura-grid">
             <div class="procura-copy">
-              <span class="eyebrow">Demanda estruturada</span>
-              <h3>Não achou o modelo pronto? Publique a Procura.</h3>
+              <span class="eyebrow">Peça e receba resposta</span>
+              <h3>Não achou o modelo pronto? Publique a Procura agora.</h3>
               <p>
-                O fluxo conduz o comprador passo a passo. A ideia é deixar claro o que está sendo buscado antes que um fornecedor decida responder.
+                O bot te guia passo a passo. Em menos de dois minutos sua necessidade já está visível para quem pode atender.
               </p>
               <span class="procura-active">Funcionalidade disponível no bot</span>
             </div>
@@ -857,27 +1228,27 @@
                 <div class="procura-field">
                   <small>Referência</small>
                   <strong>Categoria + foto</strong>
-                  <span>Ajuda o fornecedor a entender rapidamente o tipo de produto.</span>
+                  <span>O fornecedor entende o produto de cara e responde mais rápido.</span>
                 </div>
                 <div class="procura-field">
                   <small>Necessidade</small>
                   <strong>Descrição + quantidade</strong>
-                  <span>O pedido deixa de ser uma mensagem vaga.</span>
+                  <span>Pedido certeiro atrai proposta certeira.</span>
                 </div>
                 <div class="procura-field">
                   <small>Condição</small>
                   <strong>Prazo + faixa de preço</strong>
-                  <span>Informações que ajudam a filtrar respostas incompatíveis.</span>
+                  <span>Só chega resposta de quem realmente atende sua necessidade.</span>
                 </div>
                 <div class="procura-field">
                   <small>Flexibilidade</small>
                   <strong>Aceita similar + opcionais</strong>
-                  <span>O comprador consegue indicar até onde pode adaptar a necessidade.</span>
+                  <span>Quanto mais aberto, mais rápido você fecha negócio.</span>
                 </div>
               </div>
 
               <div class="procura-foot">
-                Depois da publicação, fornecedores podem responder à Procura. O VDV organiza essa aproximação; negociação, pagamento e entrega continuam entre as partes.
+                Publicou, é só aguardar: os fornecedores respondem direto à sua Procura. O VDV aproxima as pontas e sai de cena — negociação, pagamento e entrega ficam com vocês.
               </div>
             </div>
           </div>
@@ -888,53 +1259,52 @@
     <section class="section" id="confianca">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Confiança sem exagero</span>
-          <h2>Uma página moderna não precisa fingir que o projeto é maior do que é.</h2>
+          <span class="eyebrow">Por que usar o VDV</span>
+          <h2>Feito por quem conhece a malharia, pra fazer sua mercadoria girar mais rápido.</h2>
         </div>
 
         <div class="trust-grid">
           <article class="trust-main reveal">
-            <h3>Projeto local, problema real.</h3>
-            <p>O VDV nasceu para ajudar a mercadoria de malharia a circular melhor dentro do próprio ecossistema comercial, começando por Monte Sião e região.</p>
+            <h3>Nascido em Monte Sião pra resolver um problema real do setor.</h3>
+            <p>O VDV existe pra tirar sua mercadoria do grupo bagunçado e colocar ela na frente de quem realmente compra.</p>
 
             <div class="origin">
               <div class="origin-icon">◎</div>
               <div>
-                <strong>Origem</strong>
-                <span>Projeto criado em Monte Sião para o setor de malharia local.</span>
+                <strong>De onde veio</strong>
+                <span>Criado em Monte Sião, direto pra quem vive do setor de malharia.</span>
               </div>
             </div>
 
             <div class="origin">
               <div class="origin-icon">↔</div>
               <div>
-                <strong>Função</strong>
-                <span>Organizar oferta, busca, publicação de Procuras, respostas e contato entre quem tem mercadoria e quem precisa comprar.</span>
+                <strong>Pra que serve</strong>
+                <span>Colocar quem tem mercadoria e quem precisa comprar em contato direto, sem enrolação.</span>
               </div>
             </div>
 
             <div class="origin">
               <div class="origin-icon">◌</div>
               <div>
-                <strong>Escala</strong>
-                <span>Começa local e pode crescer sem perder o foco na utilidade prática.</span>
+                <strong>Aproveite agora</strong>
+                <span>Quanto antes você entrar, mais cedo seu estoque começa a girar.</span>
               </div>
             </div>
           </article>
 
           <aside class="trust-side reveal">
-            <span class="eyebrow">O que está claro desde o início</span>
+            <span class="eyebrow">Combinado desde já, sem letra miúda</span>
             <ul class="truth-list">
-              <li><i>✓</i><span>O VDV não processa pagamentos.</span></li>
-              <li><i>✓</i><span>O VDV não realiza entrega ou logística.</span></li>
-              <li><i>✓</i><span>Disponibilidade e quantidade são informadas por quem anuncia.</span></li>
-              <li><i>✓</i><span>A negociação é responsabilidade das partes.</span></li>
-              <li><i>✓</i><span>Não há promessa de venda garantida.</span></li>
+              <li><i>✓</i><span>Sem comissão sobre a sua venda.</span></li>
+              <li><i>✓</i><span>Você negocia direto, sem intermediário.</span></li>
+              <li><i>✓</i><span>Quem anuncia informa disponibilidade e quantidade.</span></li>
+              <li><i>✓</i><span>O VDV não processa pagamento nem cuida de entrega — isso fica entre vocês.</span></li>
             </ul>
 
             <div class="commission">
-              <b>Hoje, o VDV não cobra comissão sobre a negociação.</b>
-              <p>Essa é a condição atual do projeto, sem promessa de gratuidade eterna.</p>
+              <b>Hoje o VDV não cobra comissão sobre a negociação.</b>
+              <p>É a condição atual do projeto. Aproveite enquanto está assim.</p>
             </div>
           </aside>
         </div>
@@ -945,43 +1315,42 @@
       <div class="wrap faq">
         <div class="section-head reveal">
           <span class="eyebrow">Perguntas frequentes</span>
-          <h2>O essencial antes de entrar.</h2>
+          <h2>O que você precisa saber antes de entrar.</h2>
         </div>
 
         <details class="reveal">
           <summary>O VDV é um grupo de Telegram?</summary>
-          <p>Não. O VDV funciona por bot e organiza anúncios, pesquisa e solicitação de contato. A proposta é reduzir o ruído de conversa solta.</p>
+          <p>Não. Ele funciona por bot, que organiza anúncio, pesquisa e pedido de contato. A ideia é justamente tirar isso da bagunça de conversa solta.</p>
         </details>
 
         <details class="reveal">
           <summary>Quem pode usar?</summary>
-          <p>Produtores, fornecedores, lojistas, revendedores e compradores de atacado/pronta entrega de malharia. O projeto começa com foco em Monte Sião e região.</p>
+          <p>Produtores, fornecedores, lojistas, revendedores e compradores de atacado ou pronta entrega de malharia. Por enquanto o foco é Monte Sião e região.</p>
         </details>
 
         <details class="reveal">
-          <summary>Hoje o VDV cobra comissão?</summary>
-          <p>Hoje, o VDV não cobra comissão sobre a negociação. A negociação comercial ocorre diretamente entre as partes.</p>
+          <summary>O VDV cobra comissão?</summary>
+          <p>Hoje não. A negociação comercial acontece direto entre as partes, sem o VDV levando parte do valor.</p>
         </details>
 
         <details class="reveal">
           <summary>O VDV garante estoque, pagamento, qualidade ou entrega?</summary>
-          <p>Não. A disponibilidade e quantidade são informadas por quem anuncia. O VDV não processa pagamentos, não faz logística e não garante qualidade ou entrega.</p>
+          <p>Não. Quem anuncia é quem informa disponibilidade e quantidade. O VDV não processa pagamento, não cuida de logística e não garante qualidade nem entrega.</p>
         </details>
 
         <details class="reveal">
           <summary>Posso publicar um modelo que estou procurando?</summary>
-          <p>Sim. A modalidade Procura está ativa. O bot conduz o preenchimento de categoria, foto de referência, descrição, quantidade, prazo, faixa de preço, aceitação de similar, informações opcionais, expiração e confirmação. Depois de publicada, fornecedores podem responder à Procura.</p>
+          <p>Pode sim. A Procura já está ativa. O bot conduz você por categoria, foto de referência, descrição, quantidade, prazo, faixa de preço, se aceita similar, informações extras, prazo de validade e confirmação. Depois de publicada, os fornecedores podem responder.</p>
         </details>
 
-
         <details class="reveal">
-          <summary>O VDV envia alertas automáticos para novas Procuras?</summary>
-          <p>O fluxo de publicar e responder Procuras já está ativo, mas o envio automático de alertas para novas Procuras ainda não faz parte do funcionamento atual. A página não promete essa automação.</p>
+          <summary>O VDV avisa automaticamente quando surge uma Procura nova?</summary>
+          <p>Publicar e responder Procuras já funciona, mas o alerta automático para novas Procuras ainda não existe. Preferimos não prometer o que ainda não está pronto.</p>
         </details>
 
         <details class="reveal">
           <summary>Onde estão os Termos de Uso e a Política de Privacidade?</summary>
-          <p>As páginas públicas ainda serão criadas. Esta landing page já está preparada para receber esses links quando os documentos estiverem disponíveis.</p>
+          <p>Ainda vamos publicar essas páginas. O espaço já está reservado aqui para quando os documentos ficarem prontos.</p>
         </details>
       </div>
     </section>
@@ -990,19 +1359,19 @@
       <div class="wrap">
         <div class="cta-box reveal">
           <div class="cta-copy">
-            <span class="eyebrow">Experimente a ideia</span>
-            <h2>Tem produto? Anuncie. Procura um modelo? Publique.</h2>
-            <p>Abra o VDV no Telegram. Quem tem mercadoria organiza a oferta; quem precisa comprar pesquisa e também pode publicar uma Procura para receber respostas de fornecedores.</p>
+            <span class="eyebrow">Não deixe pra depois</span>
+            <h2>Cada dia parado é venda que deixa de acontecer.</h2>
+            <p>Abra o VDV agora. Tem mercadoria? Anuncie e comece a receber interesse hoje. Precisa comprar? Publique a Procura e deixe os fornecedores virem até você.</p>
 
             <div class="hero-actions">
               <a class="btn-primary" href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">
                 <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 3.2 18.6 20c-.24 1.19-.87 1.48-1.77.92l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.99.48l.35-4.97 9.05-8.18c.39-.35-.09-.55-.61-.2L6.2 13.77l-4.82-1.51c-1.05-.33-1.07-1.05.22-1.56L20.45 3.43c.87-.32 1.63.19 1.35-.23Z"/></svg>
-                Abrir @vitrine_vendasbot
+                Entrar agora no VDV
               </a>
             </div>
 
             <div class="legal-note">
-              Cookies e Analytics só são ativados conforme o consentimento do visitante. Termos de Uso e Política de Privacidade continuam reservados para publicação futura.
+              Cookies e Analytics só são ativados se você consentir. Termos de Uso e Política de Privacidade ainda serão publicados.
             </div>
           </div>
 
@@ -1014,12 +1383,12 @@
 
   <a class="mobile-cta" href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">
     <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 3.2 18.6 20c-.24 1.19-.87 1.48-1.77.92l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.99.48l.35-4.97 9.05-8.18c.39-.35-.09-.55-.61-.2L6.2 13.77l-4.82-1.51c-1.05-.33-1.07-1.05.22-1.56L20.45 3.43c.87-.32 1.63.19 1.35-.23Z"/></svg>
-    Abrir o VDV
+    Anunciar agora
   </a>
 
   <footer>
     <div class="wrap footer-row">
-      <span>VDV — Vitrine de Vendas • Estoques locais em circulação</span>
+      <span>VDV — Vitrine de Vendas • Malharia de atacado, sem ruído</span>
       <span>
         <a href="https://t.me/vitrine_vendasbot" target="_blank" rel="noopener noreferrer">@vitrine_vendasbot</a>
         &nbsp;•&nbsp;
