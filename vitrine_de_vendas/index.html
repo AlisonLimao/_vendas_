@@ -17,8 +17,8 @@
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://alisonlimao.github.io/_vendas_/vitrine_de_vendas/" />
   <meta property="og:image" content="https://alisonlimao.github.io/_vendas_/vitrine_de_vendas/banner-vdv.jpg" />
-  <meta property="og:image:width" content="1600" />
-  <meta property="og:image:height" content="600" />
+  <meta property="og:image:width" content="1568" />
+  <meta property="og:image:height" content="1003" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="VDV — sua mercadoria parada vira venda hoje" />
   <meta name="twitter:description" content="Anuncie no VDV e coloque seu estoque na frente de quem já está comprando. Sem comissão." />
@@ -868,8 +868,17 @@
   .brand-banner-img{
     display:block;
     width:100%;
-    max-height:480px;
-    object-fit:cover;
+    height:auto;
+  }
+
+  @media(max-width:640px){
+    /*
+      A arte do banner tem bastante texto pequeno (ícones de benefício,
+      barra final). Nessa largura de tela esse texto fica ilegível de
+      qualquer forma, então escondemos o gráfico e deixamos o hero em
+      HTML logo abaixo (que já é responsivo de verdade) fazer esse papel.
+    */
+    .brand-banner{ display:none; }
   }
 
   .brand-banner-fallback{
@@ -989,7 +998,7 @@
         <!--
           COMO TROCAR O BANNER:
           Salve a arte como "banner-vdv.jpg" na mesma pasta deste HTML.
-          Tamanho recomendado: 1600 x 600 px.
+          Tamanho recomendado: 1568 x 1003 px (a mesma proporção da arte atual).
           Prefira WebP se puder (arquivo bem mais leve pra carregar rápido no celular);
           nesse caso troque o "banner-vdv.jpg" acima para "banner-vdv.webp".
           Mire em algo abaixo de 200 KB pra não pesar no carregamento inicial.
@@ -998,8 +1007,8 @@
           class="brand-banner-img"
           src="banner-vdv.jpg"
           alt="Banner VDV — Vitrine de Vendas"
-          width="1600"
-          height="600"
+          width="1568"
+          height="1003"
           fetchpriority="high"
           decoding="async"
           onerror="this.style.display='none';document.getElementById('vdvBannerFallback').style.display='grid';"
@@ -1021,7 +1030,7 @@
       </div>
 
       <div class="brand-banner-help">
-       
+        
       </div>
     </div>
   </section>
