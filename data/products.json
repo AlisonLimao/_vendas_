@@ -1,6 +1,61 @@
 {
-  "generated_at": "1970-01-01T00:00:00Z",
+  "generated_at": "2026-08-31T23:29:34Z",
   "bot_username": "vitrine_vendasbot",
-  "total": 0,
-  "products": []
+  "total": 3,
+  "products": [
+    {
+      "id": "973b2c9d-8d82-45b1-87cc-3c160be64446",
+      "title": "Blusa modal babadinho",
+      "description": "Blusa modal estilosa inverno verão com babadinho nos ombros",
+      "category": {
+        "slug": "blusa",
+        "name": "Blusa"
+      },
+      "price": "28.00",
+      "minimum_order": 50,
+      "availability": "sob_pedido",
+      "quantity": 50,
+      "days_since_confirmation": 3,
+      "seller_name": "Daguel tricot",
+      "city": "Monte Sião",
+      "state": "MG",
+      "image": "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg"
+    },
+    {
+      "id": "67d16995-1020-456a-af03-ecd896a22376",
+      "title": "Blusa de Turim com botões Dourado",
+      "description": "Blusa para usar com aqueles camisete",
+      "category": {
+        "slug": "blusa",
+        "name": "Blusa"
+      },
+      "price": "15.00",
+      "minimum_order": 1,
+      "availability": "pronta_entrega",
+      "quantity": 10,
+      "days_since_confirmation": 11,
+      "seller_name": "Ana Maria",
+      "city": "Monte Sião",
+      "state": "MG",
+      "image": "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg"
+    },
+    {
+      "id": "4198839a-d872-4cc9-9910-50ff163cc6e4",
+      "title": "Calça turim",
+      "description": "Calça de Turim tipo pantalona em várias cores",
+      "category": {
+        "slug": "calca",
+        "name": "Calça"
+      },
+      "price": "30.00",
+      "minimum_order": 1,
+      "availability": "pronta_entrega",
+      "quantity": 20,
+      "days_since_confirmation": 11,
+      "seller_name": "Ana Maria",
+      "city": "Monte Sião",
+      "state": "MG",
+      "image": "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg"
+    }
+  ]
 }
