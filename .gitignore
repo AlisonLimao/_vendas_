@@ -1,0 +1,4 @@
+# nada de segredos ou lixo local
+.DS_Store
+Thumbs.db
+*.tmp-*
