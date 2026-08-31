@@ -16,6 +16,11 @@
   };
   var prefix = document.body.getAttribute("data-page") === "produto" ? "../" : "";
 
+  function track(eventName, params) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", eventName, params || {});
+  }
+
   function $(id) { return document.getElementById(id); }
 
   function esc(text) {
@@ -66,6 +71,14 @@
     window.__VDV_BOT__ = bot;
     Array.prototype.forEach.call(document.querySelectorAll("[data-deep-link]"), function (el) {
       el.setAttribute("href", deepLink(el.getAttribute("data-deep-link")));
+      el.addEventListener("click", function () {
+        track("clique_telegram", {
+          origem: el.getAttribute("data-ga-origin") || el.getAttribute("data-deep-link") || "nao_identificada",
+          event_category: "telegram",
+          event_label: el.getAttribute("data-ga-origin") || el.getAttribute("data-deep-link") || "nao_identificada",
+          transport_type: "beacon"
+        });
+      });
     });
   }
 
@@ -73,6 +86,13 @@
     var a = document.createElement("a");
     a.className = "card";
     a.href = "produto/index.html?id=" + encodeURIComponent(p.id);
+    a.addEventListener("click", function () {
+      track("abrir_produto", {
+        produto_id: p.id,
+        categoria: p.category.slug,
+        seller_name: p.seller_name
+      });
+    });
     a.innerHTML =
       '<img loading="lazy" src="' + esc(prefix + p.image) + '" alt="' + esc(p.title) + '">' +
       '<div class="card-body">' +
@@ -219,8 +239,20 @@
       "</ul>" +
       '<p class="prod-desc">' + esc(product.description) + "</p>" +
       '<a class="btn btn-primary btn-cta" href="' +
-      esc(deepLink("interesse", product)) + '">Tenho interesse — falar no Telegram</a>' +
+      esc(deepLink("interesse", product)) + '" data-ga-origin="produto_tenho_interesse">Tenho interesse — falar no Telegram</a>' +
       '<p class="prod-seller">A negociação acontece direto no bot, sem cadastro neste site.</p>';
+
+    var cta = main.querySelector('[data-ga-origin="produto_tenho_interesse"]');
+    if (cta) {
+      cta.addEventListener("click", function () {
+        track("clique_telegram", {
+          origem: "produto_tenho_interesse",
+          event_category: "telegram",
+          event_label: product.id,
+          transport_type: "beacon"
+        });
+      });
+    }
   }
 
   function setOg(prop, value) {

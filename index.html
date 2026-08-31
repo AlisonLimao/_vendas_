@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vitrine de Atacado</title>
   <meta name="description" content="Vitrine pública de atacado: ofertas de malharia e confecção com preço de atacado, direto do fornecedor. Compre pelo Telegram.">
+  <meta name="robots" content="index,follow">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P22B9BLHBR"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-P22B9BLHBR', {
+      'anonymize_ip': true
+    });
+  </script>
+  <script
+    type="text/javascript"
+    src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
+    charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.cookieconsent || !window.cookieconsent.run) return;
+      cookieconsent.run({
+        "notice_banner_type": "simple",
+        "consent_type": "express",
+        "palette": "dark",
+        "language": "pt",
+        "website_name": "VDV — Vitrine de Vendas",
+        "open_preferences_center_selector": "#open_preferences_center",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+        "callbacks": {
+          "scripts_specific_loaded": function(level) {
+            switch(level) {
+              case 'tracking':
+                gtag('consent', 'update', {
+                  'analytics_storage': 'granted'
+                });
+                break;
+              case 'targeting':
+                gtag('consent', 'update', {
+                  'ad_storage': 'granted',
+                  'ad_user_data': 'granted',
+                  'ad_personalization': 'granted'
+                });
+                break;
+            }
+          }
+        },
+        "callbacks_force": true
+      });
+    });
+  </script>
   <link rel="stylesheet" href="assets/css/vdv.css">
 </head>
 <body data-page="home">
@@ -16,7 +76,7 @@
         <small>Ofertas diretas dos fornecedores</small>
       </div>
     </div>
-    <a class="btn btn-sell" data-deep-link="vender" href="#">Quero vender</a>
+    <a class="btn btn-sell" data-deep-link="vender" data-ga-origin="cta_topo_vender" href="#">Quero vender</a>
   </header>
 
   <main>
@@ -58,15 +118,19 @@
         <h2>Não encontrou o que procura?</h2>
         <p>Crie uma <strong>Procura</strong> pelo bot: descreva o que você quer e os fornecedores respondem.</p>
       </div>
-      <a class="btn btn-primary" data-deep-link="procura" href="#">Quero criar uma Procura</a>
+      <a class="btn btn-primary" data-deep-link="procura" data-ga-origin="cta_home_procura" href="#">Quero criar uma Procura</a>
     </section>
   </main>
 
   <footer>
-    <p>Vitrine de Atacado — catálogo público sincronizado do bot <a data-deep-link="home" href="#">@vitrine_vendasbot</a>.</p>
-    <p>Compras e contatos acontecem só no Telegram. Este site não coleta dados.</p>
+    <p>Vitrine de Atacado — catálogo público sincronizado do bot <a data-deep-link="home" data-ga-origin="rodape_bot" href="#">@vitrine_vendasbot</a>.</p>
+    <p>Compras e contatos acontecem só no Telegram. Analytics e cookies opcionais só são ativados com consentimento.</p>
+    <p><a href="#" id="open_preferences_center">Preferências de cookies</a></p>
   </footer>
 
   <script src="assets/js/app.js"></script>
+  <noscript>
+    Gerenciamento de consentimento de cookies por <a href="https://www.termsfeed.com/">TermsFeed</a>.
+  </noscript>
 </body>
 </html>
