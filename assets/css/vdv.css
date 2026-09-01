@@ -139,6 +139,10 @@ footer a { color: inherit; }
 .prod-facts li { margin: .2rem 0; }
 .prod-desc { white-space: pre-wrap; }
 .prod-seller { font-size: .9rem; color: var(--vdv-text-muted); margin: .25rem 0 0; }
+.share-row { margin: .75rem 0 0; }
+.share-row .btn { display: inline-block; }
+.prod-more { font-size: .95rem; margin: 1rem 0 0; }
+.prod-more a { color: var(--vdv-primary); font-weight: 700; text-decoration: none; }
 
 @media (min-width: 720px) {
   .hero h1 { font-size: 1.7rem; }

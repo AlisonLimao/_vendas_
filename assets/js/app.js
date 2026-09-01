@@ -67,6 +67,24 @@
     return "https://t.me/" + bot + (param ? "?start=" + param : "");
   }
 
+  /* URL pública de compartilhamento do produto (página estática com OG
+   * resolvido no export — VDV-20260901-04). É a URL que vai na mensagem
+   * compartilhada, para o card de preview sair com foto/título do produto. */
+  function shareUrl(product) {
+    return new URL(prefix + "produto/" + product.id + "/", window.location.href).href;
+  }
+
+  function whatsappShareUrl(product) {
+    var msg = product.title + " — " + fmtPriceText(product) + "\n" + shareUrl(product);
+    return "https://wa.me/?text=" + encodeURIComponent(msg);
+  }
+
+  function fmtPriceText(p) {
+    var out = "R$ " + String(p.price).replace(".", ",");
+    if (p.minimum_order > 1) out += " (pedido mín. " + p.minimum_order + " un)";
+    return out;
+  }
+
   function renderStaticLinks(bot) {
     window.__VDV_BOT__ = bot;
     Array.prototype.forEach.call(document.querySelectorAll("[data-deep-link]"), function (el) {
@@ -205,7 +223,7 @@
       status.textContent = "Produto não encontrado — pode ter sido pausado ou vendido.";
       var back = document.createElement("a");
       back.className = "btn btn-primary btn-cta";
-      back.href = "index.html";
+      back.href = prefix + "index.html";
       back.textContent = "Ver ofertas";
       main.appendChild(back);
       document.title = "Produto não encontrado — Vitrine de Atacado";
@@ -240,7 +258,10 @@
       '<p class="prod-desc">' + esc(product.description) + "</p>" +
       '<a class="btn btn-primary btn-cta" href="' +
       esc(deepLink("interesse", product)) + '" data-ga-origin="produto_tenho_interesse">Tenho interesse — falar no Telegram</a>' +
-      '<p class="prod-seller">A negociação acontece direto no bot, sem cadastro neste site.</p>';
+      '<p class="share-row"><a class="btn btn-ghost" target="_blank" rel="noopener" href="' +
+      esc(whatsappShareUrl(product)) + '" id="share-wa">Compartilhar no WhatsApp</a></p>' +
+      '<p class="prod-seller">A negociação acontece direto no bot, sem cadastro neste site.</p>' +
+      '<p class="prod-more">Gostou? <a href="' + prefix + 'index.html">Veja mais produtos na nossa vitrine</a></p>';
 
     var cta = main.querySelector('[data-ga-origin="produto_tenho_interesse"]');
     if (cta) {
@@ -248,6 +269,18 @@
         track("clique_telegram", {
           origem: "produto_tenho_interesse",
           event_category: "telegram",
+          event_label: product.id,
+          transport_type: "beacon"
+        });
+      });
+    }
+
+    var share = main.querySelector("#share-wa");
+    if (share) {
+      share.addEventListener("click", function () {
+        track("compartilhar_produto", {
+          produto_id: product.id,
+          event_category: "compartilhamento",
           event_label: product.id,
           transport_type: "beacon"
         });
