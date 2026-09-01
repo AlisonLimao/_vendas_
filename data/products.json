@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T23:31:55Z",
+  "generated_at": "2026-09-01T23:37:04Z",
   "bot_username": "vitrine_vendasbot",
   "total": 4,
   "products": [
@@ -8,8 +8,8 @@
       "title": "🏍️ HONDA CG 160 — À VENDA",
       "description": "Ano: 2021\nModelo: 2022\nQuilometragem: 17.800 km\nPreço: R$ 17.000\nSegundo proprietário no documento. Segundo o vendedor, quem efetivamente utilizou a moto foi ele; o proprietário anterior apenas a retirou da loja.\nAcompanha:\n• Manual\n• Chave reserva\n• Alarme",
       "category": {
-        "slug": "outro",
-        "name": "Outro"
+        "slug": "veiculos",
+        "name": "Veículos"
       },
       "price": "17000.00",
       "minimum_order": 1,
