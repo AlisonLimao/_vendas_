@@ -1,8 +1,26 @@
 {
-  "generated_at": "2026-09-01T21:53:12Z",
+  "generated_at": "2026-09-01T22:33:08Z",
   "bot_username": "vitrine_vendasbot",
-  "total": 3,
+  "total": 4,
   "products": [
+    {
+      "id": "d58b9b1b-8d8a-43e6-80ca-553435d11a0a",
+      "title": "🏍️ HONDA CG 160 — À VENDA",
+      "description": "Ano: 2021\nModelo: 2022\nQuilometragem: 17.800 km\nPreço: R$ 17.000\nSegundo proprietário no documento. Segundo o vendedor, quem efetivamente utilizou a moto foi ele; o proprietário anterior apenas a retirou da loja.\nAcompanha:\n• Manual\n• Chave reserva\n• Alarme",
+      "category": {
+        "slug": "outro",
+        "name": "Outro"
+      },
+      "price": "17000.00",
+      "minimum_order": 1,
+      "availability": "pronta_entrega",
+      "quantity": 1,
+      "days_since_confirmation": 0,
+      "seller_name": "Alison limão",
+      "city": "Monte Sião",
+      "state": "MG",
+      "image": "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a.jpg"
+    },
     {
       "id": "973b2c9d-8d82-45b1-87cc-3c160be64446",
       "title": "Blusa modal babadinho",
