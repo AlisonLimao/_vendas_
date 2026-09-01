@@ -105,6 +105,15 @@ h2 { font-size: 1.15rem; margin: 1.25rem 0 .75rem; }
 
 .hero { padding: .5rem 0 0; }
 
+/* Banner da arte oficial (VDV-20260831-05) — responsivo; fundo branco vira
+   card no tema escuro (a arte tem fundo claro). */
+.hero-banner { display: flex; justify-content: center; margin: .5rem 0 1rem; }
+.hero-banner img {
+  width: 100%; max-width: 24rem; height: auto;
+  border-radius: var(--radius); background: #fff;
+  border: 1px solid var(--vdv-border); box-shadow: var(--shadow);
+}
+
 .cta-procura {
   margin: 2rem 0; padding: 1.25rem;
   border: 1px dashed var(--vdv-primary); border-radius: var(--radius);
