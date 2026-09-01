@@ -17,6 +17,18 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
+    function vdvGrantAnalyticsAndTrackPage() {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+      if (window.__vdvAnalyticsPageTrackedAfterConsent) return;
+      window.__vdvAnalyticsPageTrackedAfterConsent = true;
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname + window.location.search
+      });
+    }
 
     gtag('consent', 'default', {
       'ad_storage': 'denied',
@@ -55,9 +67,7 @@
           "scripts_specific_loaded": function(level) {
             switch(level) {
               case 'tracking':
-                gtag('consent', 'update', {
-                  'analytics_storage': 'granted'
-                });
+                vdvGrantAnalyticsAndTrackPage();
                 break;
               case 'targeting':
                 gtag('consent', 'update', {
