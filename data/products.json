@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T23:37:04Z",
+  "generated_at": "2026-09-01T23:38:05Z",
   "bot_username": "vitrine_vendasbot",
   "total": 4,
   "products": [
@@ -13,6 +13,7 @@
       },
       "price": "17000.00",
       "minimum_order": 1,
+      "sale_type": "atacado",
       "availability": "pronta_entrega",
       "quantity": 1,
       "days_since_confirmation": 0,
@@ -31,6 +32,7 @@
       },
       "price": "28.00",
       "minimum_order": 50,
+      "sale_type": "atacado",
       "availability": "sob_pedido",
       "quantity": 50,
       "days_since_confirmation": 4,
@@ -49,6 +51,7 @@
       },
       "price": "15.00",
       "minimum_order": 1,
+      "sale_type": "atacado",
       "availability": "pronta_entrega",
       "quantity": 10,
       "days_since_confirmation": 12,
@@ -67,6 +70,7 @@
       },
       "price": "30.00",
       "minimum_order": 1,
+      "sale_type": "atacado",
       "availability": "pronta_entrega",
       "quantity": 20,
       "days_since_confirmation": 12,
