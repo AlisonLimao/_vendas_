@@ -31,6 +31,7 @@
 
   function fmtPrice(p) {
     var out = "R$ " + String(p.price).replace(".", ",");
+    if (p.sale_type === "peca_unica") return out + ' <small>(peça única)</small>';
     if (p.minimum_order > 1) out += ' <small>(pedido mín. ' + p.minimum_order + " un)</small>";
     return out;
   }
@@ -45,6 +46,12 @@
     if (p.days_since_confirmation == null) return "";
     return p.days_since_confirmation >= FRESH_DAYS
       ? '<span class="badge badge-warn">Confirmar disponibilidade</span>'
+      : "";
+  }
+
+  function saleBadge(p) {
+    return p.sale_type === "peca_unica"
+      ? '<span class="badge badge-sale">🏷️ PEÇA ÚNICA</span>'
       : "";
   }
 
@@ -81,6 +88,7 @@
 
   function fmtPriceText(p) {
     var out = "R$ " + String(p.price).replace(".", ",");
+    if (p.sale_type === "peca_unica") return out + " (peça única)";
     if (p.minimum_order > 1) out += " (pedido mín. " + p.minimum_order + " un)";
     return out;
   }
@@ -117,7 +125,7 @@
       '<p class="card-title">' + esc(p.title) + "</p>" +
       '<p class="card-meta">' + esc(p.category.name) + " · " + esc(p.city) + "/" + esc(p.state) + "</p>" +
       '<p class="card-price">' + fmtPrice(p) + "</p>" +
-      "<div>" + freshnessBadge(p) + "</div>" +
+      "<div>" + saleBadge(p) + freshnessBadge(p) + "</div>" +
       "</div>";
     return a;
   }
@@ -232,7 +240,9 @@
 
     status.hidden = true;
     document.title = product.title + " — Vitrine de Atacado";
-    setOg("og:title", product.title + " — atacado em " + product.city + "/" + product.state);
+    var isPecaUnica = product.sale_type === "peca_unica";
+    setOg("og:title", product.title + " — " +
+      (isPecaUnica ? "peça única" : "atacado") + " em " + product.city + "/" + product.state);
     setOg("og:description", product.description.slice(0, 160));
     var ogImg = document.querySelector('meta[property="og:image"]');
     if (!ogImg) {
@@ -243,6 +253,9 @@
     ogImg.setAttribute("content", new URL(product.image, window.location.href).href);
 
     var qty = product.quantity ? " · " + product.quantity + " un em estoque" : "";
+    var moLi = isPecaUnica
+      ? "<li>🏷️ Peça única — valor da unidade</li>"
+      : "<li>🧾 Pedido mínimo: " + product.minimum_order + " unidades</li>";
     main.innerHTML =
       '<img class="prod-photo" loading="lazy" width="640" height="640" src="' +
       esc(prefix + product.image) + '" alt="' + esc(product.title) + '">' +
@@ -252,7 +265,7 @@
       "<li>🏪 Vendido por <strong>" + esc(product.seller_name) + "</strong> · " +
       esc(product.city) + "/" + esc(product.state) + "</li>" +
       "<li>📦 " + esc(AVAILABILITY_LABELS[product.availability] || "Disponível") + qty + "</li>" +
-      "<li>🧾 Pedido mínimo: " + product.minimum_order + " unidades</li>" +
+      moLi +
       "<li>🗓️ " + esc(freshText(product)) + "</li>" +
       "</ul>" +
       '<p class="prod-desc">' + esc(product.description) + "</p>" +

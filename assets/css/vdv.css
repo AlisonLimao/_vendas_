@@ -88,6 +88,7 @@ h2 { font-size: 1.15rem; margin: 1.25rem 0 .75rem; }
   background: #e0f2f1; color: var(--vdv-primary);
 }
 .badge-warn { background: #fef3c7; color: #92400e; }
+.badge-sale { background: #fce7f3; color: #9d174d; }
 
 .btn {
   display: inline-block; padding: .65rem 1.1rem; border-radius: 999px;
