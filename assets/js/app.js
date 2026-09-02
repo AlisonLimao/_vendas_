@@ -2,7 +2,8 @@
  * Sem framework, sem backend, sem coleta de dados. Todo CTA vira deep link do
  * Telegram (BANCO → WEB — este site nunca escreve em lugar nenhum).
  *
- * Páginas: body[data-page="home"] (index.html) e body[data-page="produto"].
+ * Páginas: body[data-page="home"] (index.html), body[data-page="produto"] e
+ * páginas institucionais (data-page="institucional" — só deep links).
  */
 (function () {
   "use strict";
@@ -313,8 +314,9 @@
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (catalog) {
         renderStaticLinks(catalog.bot_username || DEFAULT_BOT);
-        if (document.body.getAttribute("data-page") === "produto") initProduto(catalog);
-        else initHome(catalog);
+        var page = document.body.getAttribute("data-page");
+        if (page === "produto") initProduto(catalog);
+        else if (page === "home") initHome(catalog);
       })
       .catch(function () {
         var s = $("status");

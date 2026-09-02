@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alisonlimao.github.io/_vendas_/sitemap.xml
