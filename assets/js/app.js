@@ -124,6 +124,7 @@
       '<div class="card-body">' +
       '<p class="card-title">' + esc(p.title) + "</p>" +
       '<p class="card-meta">' + esc(p.category.name) + " · " + esc(p.city) + "/" + esc(p.state) + "</p>" +
+      (p.seller_name ? '<p class="card-seller">Vendido por ' + esc(p.seller_name) + "</p>" : "") +
       '<p class="card-price">' + fmtPrice(p) + "</p>" +
       "<div>" + saleBadge(p) + freshnessBadge(p) + "</div>" +
       "</div>";
