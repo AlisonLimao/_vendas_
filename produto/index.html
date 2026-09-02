@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Produto — Vitrine de Atacado</title>
+  <title>Produto — VDV, Vitrine de Vendas</title>
   <meta name="description" content="Detalhes da oferta de atacado: preço, pedido mínimo, disponibilidade e contato pelo Telegram.">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="product">
-  <meta property="og:site_name" content="Vitrine de Atacado">
+  <meta property="og:site_name" content="VDV — Vitrine de Vendas">
   <!-- Opengraph completado dinamicamente (OG image precisa de URL absoluta).
        A imagem abaixo é o fallback quando o produto não renderiza og:image
        própria (banner oficial do VDV — VDV-20260831-05). -->
@@ -91,9 +91,13 @@
 </head>
 <body data-page="produto">
   <header class="topbar">
-    <a class="btn btn-ghost" href="..">&larr; Voltar</a>
+    <a class="btn btn-ghost" href=".." data-ga-origin="produto_voltar">&larr; Vitrine</a>
     <div class="brand">
-      <strong>Vitrine de Atacado</strong>
+      <span class="logo" aria-hidden="true">VDV</span>
+      <div>
+        <strong>Vitrine de Vendas</strong>
+        <small>Estoques locais em circulação</small>
+      </div>
     </div>
     <a class="btn btn-sell" data-deep-link="vender" data-ga-origin="produto_topo_vender" href="#">Quero vender</a>
   </header>
@@ -103,7 +107,7 @@
   </main>
 
   <footer>
-    <p>Compras e contatos acontecem só no Telegram. Analytics e cookies opcionais só são ativados com consentimento.</p>
+    <p>Sem taxa de plataforma: a negociação acontece direto entre você e o fornecedor, pelo Telegram. Analytics e cookies opcionais só são ativados com consentimento.</p>
     <p><a href="#" id="open_preferences_center">Preferências de cookies</a></p>
   </footer>
 

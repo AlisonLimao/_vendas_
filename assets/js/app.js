@@ -234,12 +234,12 @@
       back.href = prefix + "index.html";
       back.textContent = "Ver ofertas";
       main.appendChild(back);
-      document.title = "Produto não encontrado — Vitrine de Atacado";
+      document.title = "Produto não encontrado — VDV, Vitrine de Vendas";
       return;
     }
 
     status.hidden = true;
-    document.title = product.title + " — Vitrine de Atacado";
+    document.title = product.title + " — VDV, Vitrine de Vendas";
     var isPecaUnica = product.sale_type === "peca_unica";
     setOg("og:title", product.title + " — " +
       (isPecaUnica ? "peça única" : "atacado") + " em " + product.city + "/" + product.state);

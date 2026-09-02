@@ -88,29 +88,35 @@
 <body data-page="home">
   <header class="topbar">
     <div class="brand">
-      <span class="logo" aria-hidden="true">🧶</span>
+      <span class="logo" aria-hidden="true">VDV</span>
       <div>
-        <strong>Vitrine de Atacado</strong>
-        <small>Ofertas diretas dos fornecedores</small>
+        <strong>Vitrine de Vendas</strong>
+        <small>Estoques locais em circulação</small>
       </div>
     </div>
     <a class="btn btn-sell" data-deep-link="vender" data-ga-origin="cta_topo_vender" href="#">Quero vender</a>
   </header>
 
   <main>
-    <!-- Banner da arte oficial do VDV (VDV-20260831-05) -->
-    <section class="hero-banner">
-      <img src="assets/vdv-banner.jpg" alt="VDV — Vitrine de Vendas. Estoques locais em circulação" width="664" height="643">
-    </section>
-
     <section class="hero">
-      <h1>Compre no atacado, direto de quem produz</h1>
-      <p>Preço de atacado, contatos verificados no Telegram, sem cadastro no site.</p>
-      <div class="searchbar">
-        <input id="search" type="search" placeholder="Buscar produto (ex.: blusa de inverno)"
-               autocomplete="off" aria-label="Buscar produto">
+      <div class="hero-copy">
+        <h1>Preço de atacado, direto de quem produz</h1>
+        <p>Ofertas reais de fornecedores da região. Você negocia direto pelo Telegram — sem cadastro no site, sem taxa de plataforma.</p>
+        <ul class="trust-row" aria-label="Por que confiar">
+          <li>✓ Sem taxa de plataforma</li>
+          <li>✓ Negociação direta</li>
+          <li>✓ Estoques locais em circulação</li>
+        </ul>
+        <div class="searchbar">
+          <input id="search" type="search" placeholder="Buscar produto (ex.: blusa de inverno)"
+                 autocomplete="off" aria-label="Buscar produto">
+        </div>
+        <div id="categories" class="chips" aria-label="Categorias"></div>
       </div>
-      <div id="categories" class="chips" aria-label="Categorias"></div>
+      <!-- Banner da arte oficial do VDV (VDV-20260831-05) -->
+      <div class="hero-banner">
+        <img src="assets/vdv-banner.jpg" alt="VDV — Vitrine de Vendas. Estoques locais em circulação" width="664" height="643">
+      </div>
     </section>
 
     <p id="status" class="status" role="status"></p>
@@ -146,8 +152,8 @@
   </main>
 
   <footer>
-    <p>Vitrine de Atacado — catálogo público sincronizado do bot <a data-deep-link="home" data-ga-origin="rodape_bot" href="#">@vitrine_vendasbot</a>.</p>
-    <p>Compras e contatos acontecem só no Telegram. Analytics e cookies opcionais só são ativados com consentimento.</p>
+    <p><strong>VDV — Vitrine de Vendas</strong> · catálogo público sincronizado do bot <a data-deep-link="home" data-ga-origin="rodape_bot" href="#">@vitrine_vendasbot</a>.</p>
+    <p>Sem taxa de plataforma: a negociação é direta entre você e o fornecedor, pelo Telegram. Analytics e cookies opcionais só são ativados com consentimento.</p>
     <p><a href="#" id="open_preferences_center">Preferências de cookies</a></p>
   </footer>
 
