@@ -30,8 +30,17 @@
     });
   }
 
+  // Preço monetário pt-BR com milhar (VDV-20260903-01): "17000.00" -> "17.000,00".
+  function fmtMoney(value) {
+    var n = Number(value);
+    if (!isFinite(n)) n = 0;
+    var parts = n.toFixed(2).split(".");
+    var inteira = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return inteira + "," + parts[1];
+  }
+
   function fmtPrice(p) {
-    var out = "R$ " + String(p.price).replace(".", ",");
+    var out = "R$ " + fmtMoney(p.price);
     if (p.sale_type === "peca_unica") return out + ' <small>(peça única)</small>';
     if (p.minimum_order > 1) out += ' <small>(pedido mín. ' + p.minimum_order + " un)</small>";
     return out;
@@ -88,7 +97,7 @@
   }
 
   function fmtPriceText(p) {
-    var out = "R$ " + String(p.price).replace(".", ",");
+    var out = "R$ " + fmtMoney(p.price);
     if (p.sale_type === "peca_unica") return out + " (peça única)";
     if (p.minimum_order > 1) out += " (pedido mín. " + p.minimum_order + " un)";
     return out;
