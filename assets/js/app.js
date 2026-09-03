@@ -267,9 +267,26 @@
     var moLi = isPecaUnica
       ? "<li>🏷️ Peça única — valor da unidade</li>"
       : "<li>🧾 Pedido mínimo: " + product.minimum_order + " unidades</li>";
+    // Galeria completa (VDV-20260903-03): principal + extras; sem `images`
+    // (JSON antigo em cache), degrada para a foto única de sempre.
+    var photos = (product.images && product.images.length > 0)
+      ? product.images
+      : [product.image];
+    var thumbs = photos.length > 1
+      ? '<div class="prod-thumbs" role="group" aria-label="Fotos do produto">' +
+        Array.prototype.map.call(photos, function (src, i) {
+          return '<button type="button" class="prod-thumb' + (i === 0 ? " is-active" : "") +
+            '" data-src="' + esc(prefix + src) + '" aria-label="Ver foto ' + (i + 1) + '">' +
+            '<img loading="lazy" src="' + esc(prefix + src) + '" alt=""></button>';
+        }).join("") +
+        "</div>"
+      : "";
     main.innerHTML =
-      '<img class="prod-photo" loading="lazy" width="640" height="640" src="' +
-      esc(prefix + product.image) + '" alt="' + esc(product.title) + '">' +
+      '<div class="prod-gallery">' +
+      '<img class="prod-photo" id="prod-photo-main" loading="lazy" width="640" height="640" src="' +
+      esc(prefix + photos[0]) + '" alt="' + esc(product.title) + '">' +
+      thumbs +
+      "</div>" +
       '<h1 class="prod-title">' + esc(product.title) + "</h1>" +
       '<p class="prod-price">' + fmtPrice(product) + "</p>" +
       '<ul class="prod-facts">' +
@@ -286,6 +303,20 @@
       esc(whatsappShareUrl(product)) + '" id="share-wa">Compartilhar no WhatsApp</a></p>' +
       '<p class="prod-seller">A negociação acontece direto no bot, sem cadastro neste site.</p>' +
       '<p class="prod-more">Gostou? <a href="' + prefix + 'index.html">Veja mais produtos na nossa vitrine</a></p>';
+
+    // Troca da foto principal ao tocar a miniatura (galeria — VDV-20260903-03).
+    var mainPhoto = main.querySelector("#prod-photo-main");
+    Array.prototype.forEach.call(main.querySelectorAll(".prod-thumb"), function (btn) {
+      btn.addEventListener("click", function () {
+        if (mainPhoto && btn.getAttribute("data-src")) {
+          mainPhoto.src = btn.getAttribute("data-src");
+        }
+        Array.prototype.forEach.call(main.querySelectorAll(".prod-thumb"), function (b) {
+          b.classList.remove("is-active");
+        });
+        btn.classList.add("is-active");
+      });
+    });
 
     var cta = main.querySelector('[data-ga-origin="produto_tenho_interesse"]');
     if (cta) {

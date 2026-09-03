@@ -219,6 +219,18 @@ footer p { margin: .3rem 0; }
   border: 1px solid var(--vdv-border); box-shadow: var(--shadow-lift);
   aspect-ratio: 1 / 1; object-fit: cover; display: block;
 }
+/* Galeria do produto (VDV-20260903-03): principal + miniaturas clicáveis. */
+.prod-gallery { max-width: 32rem; margin: 0 auto; }
+.prod-gallery .prod-photo { max-width: 100%; }
+.prod-thumbs { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; }
+.prod-thumb {
+  width: 4rem; height: 4rem; padding: 0; cursor: pointer;
+  border-radius: var(--radius); border: 2px solid var(--vdv-border);
+  background: var(--vdv-surface); overflow: hidden; opacity: .75;
+}
+.prod-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prod-thumb.is-active { border-color: var(--vdv-primary); opacity: 1; }
+.prod-thumb:focus-visible { outline: 2px solid var(--vdv-primary); outline-offset: 2px; }
 .prod-title { font-size: 1.35rem; margin: 1rem 0 .25rem; letter-spacing: -0.02em; }
 .prod-price { font-size: 1.7rem; font-weight: 800; color: var(--vdv-primary); margin: 0; font-variant-numeric: tabular-nums; }
 .prod-facts { list-style: none; padding: 0; margin: .8rem 0; color: var(--vdv-text-muted); font-size: .92rem; }
