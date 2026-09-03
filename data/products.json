@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T23:08:45Z",
+  "generated_at": "2026-09-03T23:38:53Z",
   "bot_username": "vitrine_vendasbot",
   "total": 4,
   "products": [
@@ -16,11 +16,17 @@
       "sale_type": "atacado",
       "availability": "pronta_entrega",
       "quantity": 1,
-      "days_since_confirmation": 1,
+      "days_since_confirmation": 2,
       "seller_name": "Alison limão",
       "city": "Monte Sião",
       "state": "MG",
-      "image": "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a.jpg"
+      "image": "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a.jpg",
+      "images": [
+        "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a.jpg",
+        "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-2.jpg",
+        "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-3.jpg",
+        "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-4.jpg"
+      ]
     },
     {
       "id": "973b2c9d-8d82-45b1-87cc-3c160be64446",
@@ -35,11 +41,14 @@
       "sale_type": "atacado",
       "availability": "sob_pedido",
       "quantity": 50,
-      "days_since_confirmation": 5,
+      "days_since_confirmation": 6,
       "seller_name": "Daguel tricot",
       "city": "Monte Sião",
       "state": "MG",
-      "image": "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg"
+      "image": "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg",
+      "images": [
+        "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg"
+      ]
     },
     {
       "id": "67d16995-1020-456a-af03-ecd896a22376",
@@ -58,7 +67,10 @@
       "seller_name": "Ana Maria",
       "city": "Monte Sião",
       "state": "MG",
-      "image": "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg"
+      "image": "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg",
+      "images": [
+        "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg"
+      ]
     },
     {
       "id": "4198839a-d872-4cc9-9910-50ff163cc6e4",
@@ -77,7 +89,10 @@
       "seller_name": "Ana Maria",
       "city": "Monte Sião",
       "state": "MG",
-      "image": "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg"
+      "image": "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg",
+      "images": [
+        "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg"
+      ]
     }
   ]
 }
