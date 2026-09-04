@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-03T23:44:21Z",
+  "generated_at": "2026-09-04T20:25:35Z",
   "bot_username": "vitrine_vendasbot",
-  "total": 4,
+  "total": 2,
   "products": [
     {
       "id": "d58b9b1b-8d8a-43e6-80ca-553435d11a0a",
@@ -48,50 +48,6 @@
       "image": "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg",
       "images": [
         "assets/products/973b2c9d-8d82-45b1-87cc-3c160be64446.jpg"
-      ]
-    },
-    {
-      "id": "67d16995-1020-456a-af03-ecd896a22376",
-      "title": "Blusa de Turim com botões Dourado",
-      "description": "Blusa para usar com aqueles camisete",
-      "category": {
-        "slug": "blusa",
-        "name": "Blusa"
-      },
-      "price": "15.00",
-      "minimum_order": 1,
-      "sale_type": "atacado",
-      "availability": "pronta_entrega",
-      "quantity": 10,
-      "days_since_confirmation": 14,
-      "seller_name": "Ana Maria",
-      "city": "Monte Sião",
-      "state": "MG",
-      "image": "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg",
-      "images": [
-        "assets/products/67d16995-1020-456a-af03-ecd896a22376.jpg"
-      ]
-    },
-    {
-      "id": "4198839a-d872-4cc9-9910-50ff163cc6e4",
-      "title": "Calça turim",
-      "description": "Calça de Turim tipo pantalona em várias cores",
-      "category": {
-        "slug": "calca",
-        "name": "Calça"
-      },
-      "price": "30.00",
-      "minimum_order": 1,
-      "sale_type": "atacado",
-      "availability": "pronta_entrega",
-      "quantity": 20,
-      "days_since_confirmation": 14,
-      "seller_name": "Ana Maria",
-      "city": "Monte Sião",
-      "state": "MG",
-      "image": "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg",
-      "images": [
-        "assets/products/4198839a-d872-4cc9-9910-50ff163cc6e4.jpg"
       ]
     }
   ]
