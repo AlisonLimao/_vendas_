@@ -300,6 +300,15 @@
       '<p class="prod-desc">' + esc(product.description) + "</p>" +
       '<a class="btn btn-primary btn-cta" href="' +
       esc(deepLink("interesse", product)) + '" data-ga-origin="produto_tenho_interesse">Tenho interesse — falar no Telegram</a>' +
+      // Fatia 24 (VDV-20260904-01): CTA secundário do WhatsApp comercial do
+      // anunciante — link wa.me gerado no export (número só dentro do href).
+      (product.whatsapp && product.whatsapp.link
+        ? '<p class="wa-contact"><a class="btn btn-ghost" target="_blank" rel="noopener" href="' +
+          esc(product.whatsapp.link) + '" data-wa-contact>📲 Falar com ' +
+          esc(product.whatsapp.nome || product.seller_name) + " pelo WhatsApp</a>" +
+          '<span class="wa-note">Ao clicar, você inicia contato direto via WhatsApp ' +
+          "com o anunciante sobre este anúncio.</span></p>"
+        : "") +
       '<p class="share-row"><a class="btn btn-ghost" target="_blank" rel="noopener" href="' +
       esc(whatsappShareUrl(product)) + '" id="share-wa">Compartilhar no WhatsApp</a></p>' +
       '<p class="prod-seller">A negociação acontece direto no bot, sem cadastro neste site.</p>' +
@@ -337,6 +346,19 @@
         track("compartilhar_produto", {
           produto_id: product.id,
           event_category: "compartilhamento",
+          event_label: product.id,
+          transport_type: "beacon"
+        });
+      });
+    }
+
+    // Fatia 24 (VDV-20260904-01): CTA do WhatsApp comercial do anunciante.
+    var waContact = main.querySelector("[data-wa-contact]");
+    if (waContact) {
+      waContact.addEventListener("click", function () {
+        track("contato_whatsapp", {
+          produto_id: product.id,
+          event_category: "contato",
           event_label: product.id,
           transport_type: "beacon"
         });
