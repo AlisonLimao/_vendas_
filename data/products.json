@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:26:19Z",
+  "generated_at": "2026-09-04T21:32:55Z",
   "bot_username": "vitrine_vendasbot",
   "total": 2,
   "products": [
@@ -26,7 +26,11 @@
         "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-2.jpg",
         "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-3.jpg",
         "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-4.jpg"
-      ]
+      ],
+      "whatsapp": {
+        "nome": "Alison limão",
+        "link": "https://wa.me/5535991925662?text=Ol%C3%A1%2C%20vim%20pelo%20VDV%20e%20tenho%20interesse%20neste%20an%C3%BAncio%3A%20%F0%9F%8F%8D%EF%B8%8F%20HONDA%20CG%20160%20%E2%80%94%20%C3%80%20VENDA"
+      }
     },
     {
       "id": "973b2c9d-8d82-45b1-87cc-3c160be64446",
