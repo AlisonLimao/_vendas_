@@ -239,7 +239,8 @@
     }
 
     if (!product) {
-      status.textContent = "Produto não encontrado — pode ter sido pausado ou vendido.";
+      status.textContent = "Produto não encontrado — pode ter sido pausado, " +
+        "expirado ou vendido. A reativação acontece no bot.";
       var back = document.createElement("a");
       back.className = "btn btn-primary btn-cta";
       back.href = prefix + "index.html";
