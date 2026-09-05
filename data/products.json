@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T21:36:26Z",
+  "generated_at": "2026-09-05T00:18:19Z",
   "bot_username": "vitrine_vendasbot",
   "total": 2,
   "products": [
@@ -16,7 +16,7 @@
       "sale_type": "atacado",
       "availability": "pronta_entrega",
       "quantity": 1,
-      "days_since_confirmation": 2,
+      "days_since_confirmation": 3,
       "seller_name": "Alison limão",
       "city": "Monte Sião",
       "state": "MG",
@@ -28,8 +28,8 @@
         "assets/products/d58b9b1b-8d8a-43e6-80ca-553435d11a0a-4.jpg"
       ],
       "whatsapp": {
-        "nome": "Alison limão",
-        "link": "https://wa.me/5535991925662?text=Ol%C3%A1%2C%20vim%20pelo%20VDV%20e%20tenho%20interesse%20neste%20an%C3%BAncio%3A%20%F0%9F%8F%8D%EF%B8%8F%20HONDA%20CG%20160%20%E2%80%94%20%C3%80%20VENDA"
+        "nome": "Contato autorizado",
+        "link": "https://wa.me/5535991038206?text=Ol%C3%A1%2C%20vim%20pelo%20VDV%20e%20tenho%20interesse%20neste%20an%C3%BAncio%3A%20%F0%9F%8F%8D%EF%B8%8F%20HONDA%20CG%20160%20%E2%80%94%20%C3%80%20VENDA"
       }
     },
     {
@@ -45,7 +45,7 @@
       "sale_type": "atacado",
       "availability": "sob_pedido",
       "quantity": 50,
-      "days_since_confirmation": 6,
+      "days_since_confirmation": 7,
       "seller_name": "Daguel tricot",
       "city": "Monte Sião",
       "state": "MG",
