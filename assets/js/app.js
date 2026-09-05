@@ -307,7 +307,7 @@
           esc(product.whatsapp.link) + '" data-wa-contact>📲 Falar com ' +
           esc(product.whatsapp.nome || product.seller_name) + " pelo WhatsApp</a>" +
           '<span class="wa-note">Ao clicar, você inicia contato direto via WhatsApp ' +
-          "com o anunciante sobre este anúncio.</span></p>"
+          "sobre este anúncio.</span></p>"
         : "") +
       '<p class="share-row"><a class="btn btn-ghost" target="_blank" rel="noopener" href="' +
       esc(whatsappShareUrl(product)) + '" id="share-wa">Compartilhar no WhatsApp</a></p>' +
